@@ -1,0 +1,36 @@
+﻿  Comprador.cpp
+  Compras.cpp
+  Fecha.cpp
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Fecha.cpp(9,20): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Items.cpp
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Items.cpp(10,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Items.cpp(11,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Items.cpp(13,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Items.cpp(52,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Items.cpp(55,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Items.cpp(61,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  main.cpp
+  MenuPrincipal.cpp
+  Persona.cpp
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Persona.cpp(10,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Persona.cpp(11,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Persona.cpp(12,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Persona.cpp(19,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Persona.cpp(22,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Persona.cpp(25,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Proveedores.cpp
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Proveedores.cpp(12,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Proveedores.cpp(13,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Proveedores.cpp(14,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Proveedores.cpp(20,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Proveedores.cpp(23,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Proveedores.cpp(26,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Usuarios.cpp
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Usuarios.cpp(10,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Usuarios.cpp(11,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Usuarios.cpp(68,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP Laboratorio\NexaGest\Usuarios.cpp(71,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  VentanaInicio.cpp
+  Generando código...
+  Comprador.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  NexaGest.vcxproj -> E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Debug\NexaGest.exe

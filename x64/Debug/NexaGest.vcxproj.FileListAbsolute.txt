@@ -1,0 +1,6 @@
+E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Debug\NexaGest.vcxproj.AssemblyReference.cache
+E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Debug\NexaGest.exe
+E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Debug\NexaGest.VentanaInicio.resources
+E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Debug\NexaGest.vcxproj.GenerateResource.cache
+E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Debug\NexaGest.MenuPrincipal.resources
+E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Debug\NexaGest.VentanaItems.resources

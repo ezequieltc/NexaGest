@@ -1,0 +1,5 @@
+﻿  MenuPrincipal.cpp
+  VentanaInicio.cpp
+  main.cpp
+  Generando código...
+LINK : fatal error LNK1104: no se puede abrir el archivo 'E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Release\NexaGest.exe'
