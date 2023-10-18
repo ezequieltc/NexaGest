@@ -1,4 +1,9 @@
 #pragma once
+#include "Items.h";
+#include <iostream>
+#include <cstring>
+#include <vector>
+#include "VentanaItems.h"
 
 namespace NexaGest {
 
@@ -8,25 +13,25 @@ namespace NexaGest {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace std;
+
 
 	/// <summary>
 	/// Resumen de VentanaItems
 	/// </summary>
-	public ref class VentanaItems : public System::Windows::Forms::Form
+	public ref class VentanaItems : public Form
 	{
 	public:
-		VentanaItems(void)
-		{
+		VentanaItems() {
 			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
-		}
-
+		};
+		Items items[30];
+		void cargarVector(vector<Items> vectorItems);
 	protected:
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
+
 		~VentanaItems()
 		{
 			if (components)
@@ -34,21 +39,14 @@ namespace NexaGest {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	protected:
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Nombre;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Descripcion;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Precio;
 
 
-
-
-	protected:
 
 	private:
-		/// <summary>
-		/// Variable del diseñador necesaria.
-		/// </summary>
+		DataGridView^ dataGridView1;
+		DataGridViewTextBoxColumn^ Nombre;
+		DataGridViewTextBoxColumn^ Descripcion;
+		DataGridViewTextBoxColumn^ Precio;
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
