@@ -1,9 +1,8 @@
 #pragma once
 #include "VentanaItems.h"
+#include "VentanaInventario.h"
 #include "Usuarios.h"
-#include <cstring>
-#include <iostream>
-#include <string>
+
 
 namespace NexaGest {
 
@@ -54,6 +53,7 @@ namespace NexaGest {
 		/// </summary>
 		System::ComponentModel::Container ^components;
 		VentanaItems^ ventanaItems = nullptr;
+		VentanaInventario^ ventanaInventario = nullptr;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -74,14 +74,10 @@ namespace NexaGest {
 			// 
 			this->labelBienvenido->AutoSize = true;
 			this->labelBienvenido->Dock = System::Windows::Forms::DockStyle::Right;
-			this->labelBienvenido->Location = System::Drawing::Point(959, 0);
+			this->labelBienvenido->Location = System::Drawing::Point(1020, 0);
 			this->labelBienvenido->Name = L"labelBienvenido";
-			this->labelBienvenido->Size = System::Drawing::Size(61, 13);
+			this->labelBienvenido->Size = System::Drawing::Size(0, 13);
 			this->labelBienvenido->TabIndex = 0;
-			Usuarios user;
-			std::string nombre1 = user.getNombre();
-			String^ nombre = gcnew String(nombre1.c_str());
-			this->labelBienvenido->Text = nombre;
 			// 
 			// buttonIngresarItem
 			// 
@@ -144,6 +140,7 @@ namespace NexaGest {
 			this->button4->Size = System::Drawing::Size(100, 94);
 			this->button4->TabIndex = 4;
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MenuPrincipal::botonInventario);
 			// 
 			// MenuPrincipal
 			// 
@@ -168,12 +165,12 @@ namespace NexaGest {
 			this->Text = L"Menu Principal";
 			this->ResumeLayout(false);
 			this->PerformLayout();
-			this->FormClosed += gcnew FormClosedEventHandler(this, &MenuPrincipal::MenuCierra);
 
 		}
 #pragma endregion
 	private: 
 		Void buttonIngresarItem_Click(Object^ sender, EventArgs^ e);
 		Void MenuCierra(Object^ sender, FormClosedEventArgs^ e);
+		Void botonInventario(System::Object^ sender, System::EventArgs^ e);
 };
 }

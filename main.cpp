@@ -1,19 +1,18 @@
-#include "VentanaInicio.h"  // Asegúrate de incluir el archivo de encabezado de tu ventana principal
+#include "VentanaInicio.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
-using namespace NexaGest;
 
 
-[STAThread]
-int main(array<System::String^>^ args)
+[STAThreadAttribute]
+int main(array<String^>^ args)
 {
     // Inicializar la aplicación
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
 
     // Crear e iniciar la ventana principal
-    VentanaInicio^ ventana = gcnew VentanaInicio();
+    NexaGest::VentanaInicio^ ventana = gcnew NexaGest::VentanaInicio();
 
     Application::Run(ventana);
 

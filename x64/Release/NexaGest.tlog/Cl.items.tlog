@@ -1,4 +1,13 @@
-E:\Programacion\UTN\TP Laboratorio\NexaGest\main.cpp;E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Release\main.obj
-E:\Programacion\UTN\TP Laboratorio\NexaGest\MenuPrincipal.cpp;E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Release\MenuPrincipal.obj
-E:\Programacion\UTN\TP Laboratorio\NexaGest\VentanaInicio.cpp;E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Release\VentanaInicio.obj
-E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cpp;E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Archivos.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Comprador.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Comprador.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Compras.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Compras.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Fecha.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Fecha.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Items.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Items.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\main.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\main.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuPrincipal.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\MenuPrincipal.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Persona.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Persona.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Proveedores.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Proveedores.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Usuarios.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\Usuarios.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaInicio.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\VentanaInicio.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\VentanaItems.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.obj

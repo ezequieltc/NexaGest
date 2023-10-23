@@ -19,3 +19,13 @@ Void MenuPrincipal::buttonIngresarItem_Click(Object^ sender, EventArgs^ e) {
 		ventanaItems->BringToFront();
 	}
 }
+
+Void MenuPrincipal::botonInventario(System::Object^ sender, System::EventArgs^ e) {
+	if (ventanaInventario == nullptr || ventanaInventario->IsDisposed) {
+		ventanaInventario = gcnew VentanaInventario();
+		ventanaInventario->Show();
+	}
+	else {
+		ventanaInventario->BringToFront();
+	}
+}

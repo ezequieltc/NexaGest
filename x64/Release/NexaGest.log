@@ -1,5 +1,2 @@
-﻿  MenuPrincipal.cpp
-  VentanaInicio.cpp
-  main.cpp
-  Generando código...
-LINK : fatal error LNK1104: no se puede abrir el archivo 'E:\Programacion\UTN\TP Laboratorio\NexaGest\x64\Release\NexaGest.exe'
+﻿  Archivos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  NexaGest.vcxproj -> E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.exe

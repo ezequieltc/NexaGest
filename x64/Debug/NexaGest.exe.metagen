@@ -1,5 +1,6 @@
   NexaGest.MenuPrincipal.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaInicio.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.VentanaInventario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaItems.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly NexaGest, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
@@ -19,6 +20,15 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 Class NexaGest.VentanaItems: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ingresarItem(): PrivateScope, Public, HideBySig
+    botonIngresar(Object, EventArgs): PrivateScope, Public, HideBySig
+    botonCancelar(Object, EventArgs): PrivateScope, Public, HideBySig
+Class NexaGest.VentanaInventario: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    cargarItems(): PrivateScope, Public, HideBySig
 Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

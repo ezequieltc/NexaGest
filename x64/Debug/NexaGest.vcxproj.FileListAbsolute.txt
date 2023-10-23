@@ -10,3 +10,4 @@ E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.VentanaInicio.res
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.VentanaItems.resources
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.vcxproj.GenerateResource.cache
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.exe
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.VentanaInventario.resources
