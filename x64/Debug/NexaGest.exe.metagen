@@ -35,3 +35,6 @@ Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
 Class NexaGest.VentanaInicio: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    buttonCancelar_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    buttonIngresar_Click(Object, EventArgs): PrivateScope, Public, HideBySig

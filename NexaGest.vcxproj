@@ -126,6 +126,7 @@
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Proveedores.cpp" />
     <ClCompile Include="Usuarios.cpp" />
+    <ClCompile Include="Vendedor.cpp" />
     <ClCompile Include="VentanaInicio.cpp" />
     <ClCompile Include="VentanaInventario.cpp" />
     <ClCompile Include="VentanaItems.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Proveedores.h" />
     <ClInclude Include="Usuarios.h" />
+    <ClInclude Include="Vendedor.h" />
     <ClInclude Include="VentanaInicio.h">
       <FileType>CppForm</FileType>
     </ClInclude>

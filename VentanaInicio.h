@@ -1,5 +1,7 @@
 #pragma once
 #include "MenuPrincipal.h"
+#include "Archivos.h"
+#include "Usuarios.h"
 
 namespace NexaGest {
 
@@ -16,13 +18,9 @@ namespace NexaGest {
 	public ref class VentanaInicio : public System::Windows::Forms::Form
 	{
 	public:
-		VentanaInicio(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
-		}
+		VentanaInicio(void);
+		Void buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonIngresar_Click(System::Object^ sender, System::EventArgs^ e);
 
 	protected:
 		/// <summary>
@@ -241,14 +239,6 @@ private: System::Void MostrarContrasena(System::Object^ sender, System::Windows:
 		_mostarContrasena = false;
 	}
 
-}
-private: System::Void buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e) {
-	Close();
-}
-private: System::Void buttonIngresar_Click(System::Object^ sender, System::EventArgs^ e) {
-	MenuPrincipal^ menuPrincipal = gcnew MenuPrincipal();
-	menuPrincipal->Show();
-	Hide();
 }
 };
 }

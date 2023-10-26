@@ -19,13 +19,8 @@ namespace NexaGest {
 	public ref class MenuPrincipal : public System::Windows::Forms::Form
 	{
 	public:
-		MenuPrincipal(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
-		}
+		MenuPrincipal();
+
 
 	protected:
 		/// <summary>
@@ -53,7 +48,10 @@ namespace NexaGest {
 		/// </summary>
 		System::ComponentModel::Container ^components;
 		VentanaItems^ ventanaItems = nullptr;
-		VentanaInventario^ ventanaInventario = nullptr;
+	private: System::Windows::Forms::Label^ labelUsuario;
+	private: System::Windows::Forms::Label^ label1;
+
+		   VentanaInventario^ ventanaInventario = nullptr;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -68,6 +66,8 @@ namespace NexaGest {
 			this->buttonCompra = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->labelUsuario = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// labelBienvenido
@@ -142,6 +142,28 @@ namespace NexaGest {
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MenuPrincipal::botonInventario);
 			// 
+			// labelUsuario
+			// 
+			this->labelUsuario->AutoSize = true;
+			this->labelUsuario->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelUsuario->Location = System::Drawing::Point(891, 9);
+			this->labelUsuario->Name = L"labelUsuario";
+			this->labelUsuario->Size = System::Drawing::Size(62, 23);
+			this->labelUsuario->TabIndex = 5;
+			this->labelUsuario->Text = L"label1";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(792, 9);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(93, 23);
+			this->label1->TabIndex = 6;
+			this->label1->Text = L"Bievenido";
+			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -149,6 +171,8 @@ namespace NexaGest {
 			this->BackColor = System::Drawing::Color::SandyBrown;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1020, 768);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->labelUsuario);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->buttonCompra);

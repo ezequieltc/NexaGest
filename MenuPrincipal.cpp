@@ -1,10 +1,18 @@
 #include <iostream>
 #include <cstring>
 #include "MenuPrincipal.h"
+#include "Archivos.h"
+#include <msclr/marshal_cppstd.h>
 
 using namespace std;
 using namespace NexaGest;
 
+MenuPrincipal::MenuPrincipal(){
+	InitializeComponent();
+	Usuarios carlitos = Archivos::getUsuarioConectado();
+	String^ user = gcnew String(carlitos.getNombre());
+	labelUsuario->Text = user;
+}
 
 Void MenuPrincipal::MenuCierra(Object^ sender, FormClosedEventArgs^ e) {
 	Application::Exit();

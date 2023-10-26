@@ -2,8 +2,13 @@
 #include "Comprador.h"
 #include "Proveedores.h"
 #include "Usuarios.h"
+#include "Persona.h"
 using namespace std;
 #include "Archivos.h"
+#include <vector>
+
+
+Usuarios Archivos::usuarioConectado;
 
 Archivos::Archivos() {
 }
@@ -30,4 +35,36 @@ void Archivos::guardarVectorItems() {
 		fwrite(&vectorItems[i], sizeof(Items), 1, p);
 	}
 	fclose(p);
+}
+
+
+void Archivos::cargarVectorUsuarios() {
+	FILE* p;
+	p = fopen("Usuarios.gest", "rb");
+	Usuarios user;
+	while (fread(&user, sizeof(Usuarios), 1, p)) {
+		vectorUsuarios.push_back(user);
+	}
+	fclose(p);
+}
+void Archivos::setVectorUsuarios(std::vector<Usuarios> vector) {
+	vectorUsuarios = vector;
+}
+void Archivos::guardarVectorUsuarios() {
+	FILE* p;
+	p = fopen("Usuarios.gest", "wb");
+	Usuarios user;
+	for (int i = 0; i < vectorUsuarios.size(); i++) {
+		fwrite(&vectorUsuarios[i], sizeof(Usuarios), 1, p);
+	}
+	fclose(p);
+}
+
+void Archivos::setUsuarioConectado(Usuarios userConectado) {
+	usuarioConectado = userConectado;
+
+}
+
+Usuarios Archivos::getUsuarioConectado() {
+	return usuarioConectado;
 }
