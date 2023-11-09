@@ -70,3 +70,28 @@ void Usuarios::setContrasena(const char* contrasena) {
 void Usuarios::setUsuario(const char* usuario) {
     strcpy(_usuario, usuario);
 }
+int Usuarios::getCompras() {
+    return _compras;
+}
+void Usuarios::setCompras(int compras) {
+    _compras = compras;
+}
+
+void Usuarios::setVentas(int ventas) {
+    _ventas = ventas;
+}
+void Usuarios::setObjetivoVentas(float objetivoventas) {
+    _objetivoVentas = objetivoventas;
+}
+void Usuarios::setRegion(const char* region) {
+    strcpy(_region, region);
+}
+int Usuarios::getVentas() {
+    return _ventas;
+}
+float Usuarios::getObjetivoVentas() {
+    return _objetivoVentas;
+}
+const char* Usuarios::getRegion() {
+    return _region;
+}

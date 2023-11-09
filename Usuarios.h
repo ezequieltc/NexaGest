@@ -12,6 +12,10 @@ private:
     bool _crearCliente;
     bool _crearProveedores;
     bool _estado;
+    int _compras;
+    int _ventas;
+    float  _objetivoVentas;
+    char  _region[30];
 
 public:
     Usuarios();
@@ -34,5 +38,13 @@ public:
     void setEstado(bool estado);
     void setContrasena(const char* contrasena);
     void setUsuario(const char* usuario);
+    int getCompras();
+    void setCompras(int compras);
+    void setVentas(int ventas);
+    void setObjetivoVentas(float objetivoventas);
+    void setRegion(const char* region);
+    int getVentas();
+    float getObjetivoVentas();
+    const char* getRegion();
 
 };
