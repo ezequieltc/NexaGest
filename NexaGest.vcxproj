@@ -117,19 +117,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Archivos.cpp" />
-    <ClCompile Include="Comprador.cpp" />
     <ClCompile Include="Compras.cpp" />
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuNuevoUsuario.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="MenuVentas.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Proveedores.cpp" />
     <ClCompile Include="Usuarios.cpp" />
-    <ClCompile Include="Vendedor.cpp" />
     <ClCompile Include="VentanaInicio.cpp" />
     <ClCompile Include="VentanaInventario.cpp" />
     <ClCompile Include="VentanaItems.cpp" />
+    <ClCompile Include="Ventas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -140,17 +141,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Archivos.h" />
-    <ClInclude Include="Comprador.h" />
     <ClInclude Include="Compras.h" />
     <ClInclude Include="Fecha.h" />
     <ClInclude Include="Items.h" />
+    <ClInclude Include="MenuNuevoUsuario.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MenuPrincipal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MenuVentas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Proveedores.h" />
     <ClInclude Include="Usuarios.h" />
-    <ClInclude Include="Vendedor.h" />
     <ClInclude Include="VentanaInicio.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -160,10 +165,17 @@
     <ClInclude Include="VentanaItems.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Ventas.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MenuNuevoUsuario.resx">
+      <DependentUpon>MenuNuevoUsuario.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuVentas.resx">
+      <DependentUpon>MenuVentas.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaInicio.resx">
       <DependentUpon>VentanaInicio.h</DependentUpon>

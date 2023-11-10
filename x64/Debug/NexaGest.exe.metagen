@@ -1,4 +1,6 @@
+  NexaGest.MenuNuevoUsuario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuPrincipal.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.MenuVentas.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaInicio.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaInventario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaItems.resources - Embedded, ContainedInManifestFile, 
@@ -29,6 +31,12 @@ Class NexaGest.VentanaInventario: AutoLayout, AnsiClass, Class, Public, BeforeFi
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     cargarItems(): PrivateScope, Public, HideBySig
+Class NexaGest.MenuVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NexaGest.MenuNuevoUsuario: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

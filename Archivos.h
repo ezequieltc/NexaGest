@@ -1,12 +1,13 @@
 #pragma once
-#include <vector>
+#include "Items.h"
 #include <iostream>
 #include <cstring>
-#include "Items.h"
+#include "Proveedores.h"
 #include "Usuarios.h"
 #include "Persona.h"
-
-
+#include "Ventas.h"
+#include "Compras.h"
+#include <vector>
 
 class Archivos
 {
@@ -15,7 +16,9 @@ class Archivos
 public:
 	std::vector<Items> vectorItems;
 	std::vector<Usuarios> vectorUsuarios;
+	std::vector<Ventas> vectorVentas;
 	Archivos();
+	static void verificarArchivos();
 	void cargarVectorItems();
 	void setVectorItems(std::vector<Items> vector);
 	void guardarVectorItems();
@@ -24,5 +27,11 @@ public:
 	void setUsuarioConectado(Usuarios userConectado);
 	static Usuarios getUsuarioConectado();
 	void guardarVectorUsuarios();
+	void cargarVectorVentas();
+	void setVectorVentas(std::vector<Ventas> vector);
+	void guardarVectorVentas();
+	void cargarVectorCllientes();
+	void guardarVectorClientes();
+
 };
 

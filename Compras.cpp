@@ -6,7 +6,7 @@ using namespace std;
 Compras::Compras() {
 
 }
-Compras::Compras(int numero, Proveedores proveedores, Comprador comprador, Items items, float total, Fecha fechaIngreso, bool estado) {
+Compras::Compras(int numero, Proveedores proveedores, Usuarios comprador, Items items, float total, Fecha fechaIngreso, bool estado) {
     _numero = numero;
     _Proveedor = proveedores;
     _Comprador = comprador;
@@ -22,7 +22,7 @@ int Compras::getNumero() {
 Proveedores Compras::getProveedor() {
     return _Proveedor;
 }
-Comprador Compras::getComprador() {
+Usuarios Compras::getComprador() {
     return _Comprador;
 }
 Items Compras::getItems() {
@@ -43,7 +43,7 @@ void Compras::setNumero(int numero) {
 void Compras::setProveedor(Proveedores proveedor) {
     _Proveedor = proveedor;
 }
-void Compras::setComprador(Comprador comprador) {
+void Compras::setComprador(Usuarios comprador) {
     _Comprador = comprador;
 }
 void Compras::setItems(Items items) {

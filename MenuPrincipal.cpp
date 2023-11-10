@@ -9,9 +9,30 @@ using namespace NexaGest;
 
 MenuPrincipal::MenuPrincipal(){
 	InitializeComponent();
-	Usuarios carlitos = Archivos::getUsuarioConectado();
-	String^ user = gcnew String(carlitos.getNombre());
+	Usuarios userConectado = Archivos::getUsuarioConectado();
+	String^ user = String::Concat(gcnew String(userConectado.getNombre()), " ", gcnew String(userConectado.getApellido()));
+	switch (userConectado.getTipo()) {
+	case 2:
+		labelTipo->Text = "Vendedor";
+		break;
+	case 3:
+		labelTipo->Text = "Comprador";
+		break;
+
+	default:
+		labelTipo->Text = "Administrador";
+		break;
+	}
+
+	if (userConectado.getTipo() == 1) {
+		buttonAgregarUsuario->Enabled = true;
+	}
+	else
+		buttonAgregarUsuario->Enabled = false;
+		buttonAgregarUsuario->BackColor = System::Drawing::Color::PeachPuff;
+
 	labelUsuario->Text = user;
+	Archivos::verificarArchivos();
 }
 
 Void MenuPrincipal::MenuCierra(Object^ sender, FormClosedEventArgs^ e) {
@@ -35,5 +56,25 @@ Void MenuPrincipal::botonInventario(System::Object^ sender, System::EventArgs^ e
 	}
 	else {
 		ventanaInventario->BringToFront();
+	}
+}
+
+Void MenuPrincipal::button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (menuVentas == nullptr || menuVentas->IsDisposed) {
+		menuVentas = gcnew MenuVentas();
+		menuVentas->Show();
+	}
+	else {
+		menuVentas->BringToFront();
+	}
+}
+
+Void MenuPrincipal::buttonAgregarUsuario_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (menuUsuario == nullptr || menuUsuario->IsDisposed) {
+		menuUsuario = gcnew MenuNuevoUsuario();
+		menuUsuario->Show();
+	}
+	else {
+		menuUsuario->BringToFront();
 	}
 }

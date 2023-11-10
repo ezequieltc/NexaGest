@@ -1,6 +1,8 @@
 #pragma once
 #include "VentanaItems.h"
 #include "VentanaInventario.h"
+#include "MenuVentas.h"
+#include "MenuNuevoUsuario.h"
 #include "Usuarios.h"
 
 
@@ -48,8 +50,12 @@ namespace NexaGest {
 		/// </summary>
 		System::ComponentModel::Container ^components;
 		VentanaItems^ ventanaItems = nullptr;
+		MenuVentas^ menuVentas = nullptr;
+		MenuNuevoUsuario^ menuUsuario = nullptr;
 	private: System::Windows::Forms::Label^ labelUsuario;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ labelTipo;
+	private: System::Windows::Forms::Button^ buttonAgregarUsuario;
 
 		   VentanaInventario^ ventanaInventario = nullptr;
 
@@ -68,6 +74,8 @@ namespace NexaGest {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->labelUsuario = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->labelTipo = (gcnew System::Windows::Forms::Label());
+			this->buttonAgregarUsuario = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// labelBienvenido
@@ -125,6 +133,7 @@ namespace NexaGest {
 			this->button3->Size = System::Drawing::Size(100, 94);
 			this->button3->TabIndex = 3;
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MenuPrincipal::button3_Click);
 			// 
 			// button4
 			// 
@@ -135,7 +144,7 @@ namespace NexaGest {
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button4->FlatAppearance->BorderSize = 2;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Location = System::Drawing::Point(623, 314);
+			this->button4->Location = System::Drawing::Point(624, 314);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(100, 94);
 			this->button4->TabIndex = 4;
@@ -145,24 +154,52 @@ namespace NexaGest {
 			// labelUsuario
 			// 
 			this->labelUsuario->AutoSize = true;
-			this->labelUsuario->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelUsuario->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelUsuario->Location = System::Drawing::Point(891, 9);
+			this->labelUsuario->Location = System::Drawing::Point(856, 9);
 			this->labelUsuario->Name = L"labelUsuario";
-			this->labelUsuario->Size = System::Drawing::Size(62, 23);
+			this->labelUsuario->Size = System::Drawing::Size(41, 15);
 			this->labelUsuario->TabIndex = 5;
 			this->labelUsuario->Text = L"label1";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(792, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(93, 23);
+			this->label1->Size = System::Drawing::Size(62, 15);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Bievenido";
+			// 
+			// labelTipo
+			// 
+			this->labelTipo->AutoSize = true;
+			this->labelTipo->Font = (gcnew System::Drawing::Font(L"Roboto", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelTipo->Location = System::Drawing::Point(792, 28);
+			this->labelTipo->Name = L"labelTipo";
+			this->labelTipo->Size = System::Drawing::Size(40, 14);
+			this->labelTipo->TabIndex = 7;
+			this->labelTipo->Text = L"label2";
+			// 
+			// buttonAgregarUsuario
+			// 
+			this->buttonAgregarUsuario->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonAgregarUsuario->BackColor = System::Drawing::Color::SandyBrown;
+			this->buttonAgregarUsuario->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonAgregarUsuario.BackgroundImage")));
+			this->buttonAgregarUsuario->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonAgregarUsuario->FlatAppearance->BorderSize = 2;
+			this->buttonAgregarUsuario->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonAgregarUsuario->Location = System::Drawing::Point(274, 429);
+			this->buttonAgregarUsuario->Name = L"buttonAgregarUsuario";
+			this->buttonAgregarUsuario->Size = System::Drawing::Size(100, 94);
+			this->buttonAgregarUsuario->TabIndex = 8;
+			this->buttonAgregarUsuario->UseVisualStyleBackColor = false;
+			this->buttonAgregarUsuario->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonAgregarUsuario_Click);
 			// 
 			// MenuPrincipal
 			// 
@@ -171,6 +208,8 @@ namespace NexaGest {
 			this->BackColor = System::Drawing::Color::SandyBrown;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1020, 768);
+			this->Controls->Add(this->buttonAgregarUsuario);
+			this->Controls->Add(this->labelTipo);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->labelUsuario);
 			this->Controls->Add(this->button4);
@@ -196,5 +235,7 @@ namespace NexaGest {
 		Void buttonIngresarItem_Click(Object^ sender, EventArgs^ e);
 		Void MenuCierra(Object^ sender, FormClosedEventArgs^ e);
 		Void botonInventario(System::Object^ sender, System::EventArgs^ e);
+		Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonAgregarUsuario_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

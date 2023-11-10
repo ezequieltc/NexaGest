@@ -6,7 +6,7 @@ using namespace std;
 Usuarios::Usuarios() {
 
 }
-Usuarios::Usuarios(const char* usuario, const char* contrasena, bool crearUser, bool crearItem, bool ordenDeVenta, bool ordenDeCompra, bool crearCliente, bool crearProveedores, bool _estado, const char* nombre, const char* apellido, const char* email, int id, bool estado) :Persona(nombre, apellido, email, id, estado) {
+Usuarios::Usuarios(const char* usuario, const char* contrasena, bool crearUser, bool crearItem, bool ordenDeVenta, bool ordenDeCompra, bool crearCliente, bool crearProveedores, int tipo, bool _estado, const char* nombre, const char* apellido, const char* email, int id, bool estado) :Persona(nombre, apellido, email, id, estado) {
     strcpy(_usuario, usuario);
     strcpy(_contrasena, contrasena);
     _crearUser = crearUser;
@@ -15,6 +15,10 @@ Usuarios::Usuarios(const char* usuario, const char* contrasena, bool crearUser, 
     _ordenDeCompra = ordenDeCompra;
     _crearCliente = crearCliente;
     _crearProveedores = crearProveedores;
+    _tipo = tipo;
+    _compras = 0;
+    _ventas = 0;
+    _objetivoVentas = 0;
 }
 const char* Usuarios::getContrasena() {
     return _contrasena;
@@ -82,6 +86,14 @@ void Usuarios::setVentas(int ventas) {
 }
 void Usuarios::setObjetivoVentas(float objetivoventas) {
     _objetivoVentas = objetivoventas;
+}
+
+void Usuarios::setTipo(int tipo) {
+    _tipo = tipo;
+}
+
+int Usuarios::getTipo() {
+    return _tipo;
 }
 void Usuarios::setRegion(const char* region) {
     strcpy(_region, region);

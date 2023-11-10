@@ -14,12 +14,13 @@ private:
     bool _estado;
     int _compras;
     int _ventas;
+    int _tipo;
     float  _objetivoVentas;
     char  _region[30];
 
 public:
     Usuarios();
-    Usuarios(const char* usuario, const char* contrasena, bool crearUser, bool crearItem, bool ordenDeVenta, bool ordenDeCompra, bool crearCliente, bool crearProveedores, bool _estado, const char* nombre, const char* apellido, const char* email, int id, bool estado);
+    Usuarios(const char* usuario, const char* contrasena, bool crearUser, bool crearItem, bool ordenDeVenta, bool ordenDeCompra, bool crearCliente, bool crearProveedores, int tipo, bool _estado, const char* nombre, const char* apellido, const char* email, int id, bool estado);
     const char* getContrasena();
     const char* getUsuario();
     bool getCrearUser();
@@ -38,6 +39,8 @@ public:
     void setEstado(bool estado);
     void setContrasena(const char* contrasena);
     void setUsuario(const char* usuario);
+    void setTipo(int tipo);
+    int getTipo();
     int getCompras();
     void setCompras(int compras);
     void setVentas(int ventas);
