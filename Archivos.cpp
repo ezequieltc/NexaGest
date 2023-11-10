@@ -53,7 +53,7 @@ void Archivos::cargarVectorUsuarios() {
 	fclose(p);
 }
 void Archivos::setVectorUsuarios(std::vector<Usuarios> vector) {
-	vectorUsuarios = vector;
+	//vectorUsuarios = vector;
 }
 void Archivos::guardarVectorUsuarios() {
 	FILE* p;
@@ -107,8 +107,12 @@ void Archivos::guardarVectorClientes() {
 
 void Archivos::verificarArchivos() {
 	if (fopen("./files/Usuarios.gest", "rb") == NULL) {
+		FILE* p;
 		cout << "El archivo no existe, se creara" << endl;
-		fopen("./files/Usuarios.gest", "wb");
+		p = fopen("./files/Usuarios.gest", "wb");
+		Usuarios user("admin", "admin", true, true, true, true, true, true, 1, true, "Administrado", "", "", 1, true);
+		fwrite(&user, sizeof(Usuarios), 1, p);
+		fclose(p);
 	}
 	if (fopen("./files/Items.gest", "rb") == NULL) {
 		cout << "El archivo no existe, se creara" << endl;

@@ -56,6 +56,7 @@ namespace NexaGest {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ labelTipo;
 	private: System::Windows::Forms::Button^ buttonAgregarUsuario;
+	private: System::Windows::Forms::Button^ buttonCerrarSesion;
 
 		   VentanaInventario^ ventanaInventario = nullptr;
 
@@ -76,6 +77,7 @@ namespace NexaGest {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->labelTipo = (gcnew System::Windows::Forms::Label());
 			this->buttonAgregarUsuario = (gcnew System::Windows::Forms::Button());
+			this->buttonCerrarSesion = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// labelBienvenido
@@ -201,6 +203,23 @@ namespace NexaGest {
 			this->buttonAgregarUsuario->UseVisualStyleBackColor = false;
 			this->buttonAgregarUsuario->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonAgregarUsuario_Click);
 			// 
+			// buttonCerrarSesion
+			// 
+			this->buttonCerrarSesion->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonCerrarSesion->BackColor = System::Drawing::Color::SandyBrown;
+			this->buttonCerrarSesion->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonCerrarSesion->FlatAppearance->BorderSize = 2;
+			this->buttonCerrarSesion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonCerrarSesion->Location = System::Drawing::Point(797, 49);
+			this->buttonCerrarSesion->Name = L"buttonCerrarSesion";
+			this->buttonCerrarSesion->Size = System::Drawing::Size(151, 34);
+			this->buttonCerrarSesion->TabIndex = 9;
+			this->buttonCerrarSesion->Text = L"Cerrar Sesion";
+			this->buttonCerrarSesion->UseVisualStyleBackColor = false;
+			this->buttonCerrarSesion->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonCerrarSesion_Click);
+			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -208,6 +227,7 @@ namespace NexaGest {
 			this->BackColor = System::Drawing::Color::SandyBrown;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1020, 768);
+			this->Controls->Add(this->buttonCerrarSesion);
 			this->Controls->Add(this->buttonAgregarUsuario);
 			this->Controls->Add(this->labelTipo);
 			this->Controls->Add(this->label1);
@@ -237,5 +257,6 @@ namespace NexaGest {
 		Void botonInventario(System::Object^ sender, System::EventArgs^ e);
 		Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonAgregarUsuario_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonCerrarSesion_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

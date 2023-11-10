@@ -1,8 +1,10 @@
 #include <iostream>
 #include <cstring>
+#include "VentanaInicio.h"
 #include "MenuPrincipal.h"
 #include "Archivos.h"
 #include <msclr/marshal_cppstd.h>
+#include <Windows.h>
 
 using namespace std;
 using namespace NexaGest;
@@ -26,17 +28,26 @@ MenuPrincipal::MenuPrincipal(){
 
 	if (userConectado.getTipo() == 1) {
 		buttonAgregarUsuario->Enabled = true;
+		buttonAgregarUsuario->BackColor = System::Drawing::Color::SandyBrown;
 	}
-	else
+	else {
 		buttonAgregarUsuario->Enabled = false;
 		buttonAgregarUsuario->BackColor = System::Drawing::Color::PeachPuff;
+	}
 
 	labelUsuario->Text = user;
-	Archivos::verificarArchivos();
+	//Archivos::verificarArchivos();
 }
 
 Void MenuPrincipal::MenuCierra(Object^ sender, FormClosedEventArgs^ e) {
 	Application::Exit();
+}
+
+Void MenuPrincipal::buttonCerrarSesion_Click(System::Object^ sender, System::EventArgs^ e) {
+	VentanaInicio^ ventanaInicio = gcnew VentanaInicio();
+	ventanaInicio->Show();
+	Close();
+
 }
 
 Void MenuPrincipal::buttonIngresarItem_Click(Object^ sender, EventArgs^ e) {

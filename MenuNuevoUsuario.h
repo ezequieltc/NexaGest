@@ -55,7 +55,8 @@ namespace NexaGest {
 	private: System::Windows::Forms::TextBox^ textBoxEmail;
 	private: System::Windows::Forms::TextBox^ textBoxUsuario;
 	private: System::Windows::Forms::TextBox^ textBoxContrasena;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::ComboBox^ comboBoxTipo;
+
 	private: System::Windows::Forms::TextBox^ textBoxObjetivo;
 
 
@@ -93,7 +94,7 @@ namespace NexaGest {
 			this->textBoxEmail = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxUsuario = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxContrasena = (gcnew System::Windows::Forms::TextBox());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBoxTipo = (gcnew System::Windows::Forms::ComboBox());
 			this->textBoxObjetivo = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
@@ -229,6 +230,7 @@ namespace NexaGest {
 			this->buttonAgregar->TabIndex = 13;
 			this->buttonAgregar->Text = L"Agregar";
 			this->buttonAgregar->UseVisualStyleBackColor = true;
+			this->buttonAgregar->Click += gcnew System::EventHandler(this, &MenuNuevoUsuario::buttonAgregar_Click);
 			// 
 			// buttonCancelar
 			// 
@@ -238,6 +240,7 @@ namespace NexaGest {
 			this->buttonCancelar->TabIndex = 14;
 			this->buttonCancelar->Text = L"Cancelar";
 			this->buttonCancelar->UseVisualStyleBackColor = true;
+			this->buttonCancelar->Click += gcnew System::EventHandler(this, &MenuNuevoUsuario::buttonCancelar_Click);
 			// 
 			// textBoxNombre
 			// 
@@ -275,14 +278,14 @@ namespace NexaGest {
 			this->textBoxContrasena->Size = System::Drawing::Size(199, 20);
 			this->textBoxContrasena->TabIndex = 19;
 			// 
-			// comboBox1
+			// comboBoxTipo
 			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Administrador", L"Vendedor", L"Comprador" });
-			this->comboBox1->Location = System::Drawing::Point(51, 163);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(146, 21);
-			this->comboBox1->TabIndex = 20;
+			this->comboBoxTipo->FormattingEnabled = true;
+			this->comboBoxTipo->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Administrador", L"Vendedor", L"Comprador" });
+			this->comboBoxTipo->Location = System::Drawing::Point(51, 163);
+			this->comboBoxTipo->Name = L"comboBoxTipo";
+			this->comboBoxTipo->Size = System::Drawing::Size(146, 21);
+			this->comboBoxTipo->TabIndex = 20;
 			// 
 			// textBoxObjetivo
 			// 
@@ -298,7 +301,7 @@ namespace NexaGest {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(330, 442);
 			this->Controls->Add(this->textBoxObjetivo);
-			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->comboBoxTipo);
 			this->Controls->Add(this->textBoxContrasena);
 			this->Controls->Add(this->textBoxUsuario);
 			this->Controls->Add(this->textBoxEmail);
@@ -320,11 +323,14 @@ namespace NexaGest {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"MenuNuevoUsuario";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MenuNuevoUsuario";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	};
+		Void buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }

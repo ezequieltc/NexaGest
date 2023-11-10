@@ -4,6 +4,7 @@
 #include <msclr/marshal_cppstd.h>
 #include <iostream>
 #include <cstring>
+#include <Windows.h>
 using namespace std;
 using namespace NexaGest;
 
@@ -11,10 +12,12 @@ using namespace NexaGest;
 VentanaInicio::VentanaInicio()
 {
 	InitializeComponent();
+	Archivos::verificarArchivos();
 }
 
 Void VentanaInicio::buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e) {
-	Close();
+	Application::Exit();
+	
 }
 
 
