@@ -1,9 +1,11 @@
+  NexaGest.MenuCrearCliente.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuNuevoUsuario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuPrincipal.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuVentas.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaInicio.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaInventario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaItems.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.VentanaVerVentas.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly NexaGest, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
 	hash=SHA1, flags=PublicKey
@@ -31,10 +33,20 @@ Class NexaGest.VentanaInventario: AutoLayout, AnsiClass, Class, Public, BeforeFi
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     cargarItems(): PrivateScope, Public, HideBySig
+    actualizarVista(): PrivateScope, Public, HideBySig
 Class NexaGest.MenuVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarValores(): PrivateScope, Public, HideBySig
+    actualizarVista(): PrivateScope, Public, HideBySig
 Class NexaGest.MenuNuevoUsuario: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NexaGest.MenuCrearCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NexaGest.VentanaVerVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

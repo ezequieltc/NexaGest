@@ -6,6 +6,7 @@
 #include "Persona.h"
 #include "Ventas.h"
 #include "Compras.h"
+#include "Clientes.h"
 #include <vector>
 using namespace std;
 #include "Archivos.h"
@@ -22,7 +23,7 @@ void Archivos::cargarVectorItems() {
 	FILE* p;
 	p = fopen("./files/Items.gest", "rb");
 	Items item;
-	while (fread(&item, sizeof(Items), 1, p)) {
+	while (fread(&item, sizeof(Items), 1, p) == 1) {
 		vectorItems.push_back(item);
 	}
 	fclose(p);
@@ -78,7 +79,7 @@ void Archivos::cargarVectorVentas() {
 	FILE* p;
 	p = fopen("./files/Ventas.gest", "rb");
 	Ventas venta;
-	while (fread(&venta, sizeof(Ventas), 1, p)) {
+	while (fread(&venta, sizeof(Ventas), 1, p) == 1) {
 		vectorVentas.push_back(venta);
 	}
 	fclose(p);
@@ -98,11 +99,23 @@ void Archivos::guardarVectorVentas() {
 	fclose(p);
 
 }
-void Archivos::cargarVectorCllientes() {
-
+void Archivos::cargarVectorClientes() {
+	FILE* p;
+	p = fopen("./files/Clientes.gest", "rb");
+	Clientes cliente;
+	while (fread(&cliente, sizeof(Clientes), 1, p) == 1) {
+		vectorClientes.push_back(cliente);
+	}
+	fclose(p);
 }
 void Archivos::guardarVectorClientes() {
-
+	FILE* p;
+	p = fopen("./files/Clientes.gest", "wb");
+	Clientes cliente;
+	for (int i = 0; i < vectorClientes.size(); i++) {
+		fwrite(&vectorClientes[i], sizeof(Clientes), 1, p);
+	}
+	fclose(p);
 }
 
 void Archivos::verificarArchivos() {

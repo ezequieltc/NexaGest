@@ -52,7 +52,14 @@ void VentanaItems::ingresarItem() {
 		vendible = checkBoxVendible->Checked;
 		comprable = checkBoxComprable->Checked;
 		estado = checkBoxEstado->Checked;
-		Items item(nombre, descripcion, 0, marca, cantidad, precio, costo, vendible, comprable, estado);
+		if (arch.vectorItems.size() == 0) {
+			id = 0;
+		}
+		else {
+			id = arch.vectorItems.back().getID() + 1;
+		}
+
+		Items item(nombre, descripcion, id, marca, cantidad, precio, costo, vendible, comprable, estado);
 		arch.vectorItems.push_back(item);
 		MessageBox::Show("El item fue ingresado correctamente", "Item ingresado", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		textBoxNombre->Text = "";

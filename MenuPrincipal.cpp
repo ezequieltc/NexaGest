@@ -89,3 +89,23 @@ Void MenuPrincipal::buttonAgregarUsuario_Click(System::Object^ sender, System::E
 		menuUsuario->BringToFront();
 	}
 }
+
+Void MenuPrincipal::buttonCrearCliente_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (menuCrearCliente == nullptr || menuCrearCliente->IsDisposed) {
+		menuCrearCliente = gcnew MenuCrearCliente();
+		menuCrearCliente->Show();
+	}
+	else {
+		menuCrearCliente->BringToFront();
+	}
+}
+
+Void MenuPrincipal::buttonVerVentas_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (ventanaVerVentas == nullptr || ventanaVerVentas->IsDisposed) {
+		ventanaVerVentas = gcnew VentanaVerVentas();
+		ventanaVerVentas->Show();
+	}
+	else {
+		ventanaVerVentas->BringToFront();
+	}
+}

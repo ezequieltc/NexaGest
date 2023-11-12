@@ -7,6 +7,7 @@
 #include "Persona.h"
 #include "Ventas.h"
 #include "Compras.h"
+#include "Clientes.h"
 #include <vector>
 
 class Archivos
@@ -17,6 +18,7 @@ public:
 	std::vector<Items> vectorItems;
 	std::vector<Usuarios> vectorUsuarios;
 	std::vector<Ventas> vectorVentas;
+	std::vector<Clientes> vectorClientes;
 	Archivos();
 	static void verificarArchivos();
 	void cargarVectorItems();
@@ -30,7 +32,7 @@ public:
 	void cargarVectorVentas();
 	void setVectorVentas(std::vector<Ventas> vector);
 	void guardarVectorVentas();
-	void cargarVectorCllientes();
+	void cargarVectorClientes();
 	void guardarVectorClientes();
 
 };

@@ -1,10 +1,6 @@
-﻿  MenuPrincipal.cpp
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-  VentanaInicio.cpp
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaInicio.cpp(26,14): warning C4101: 'userr': variable local sin referencia
-  main.cpp
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-  Generando código...
+﻿  MenuVentas.cpp
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuVentas.cpp(110,91): warning C4965: conversión boxing implícita de entero 0; utilice nullptr o conversión explícita
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuVentas.cpp(112,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuVentas.cpp(131,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   Archivos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   NexaGest.vcxproj -> E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.exe

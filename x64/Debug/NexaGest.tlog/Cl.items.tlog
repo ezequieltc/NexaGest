@@ -1,8 +1,10 @@
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\Archivos.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Clientes.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\Clientes.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\Compras.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\Compras.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\Fecha.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\Fecha.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\Items.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\Items.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\main.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\main.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuCrearCliente.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\MenuCrearCliente.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuNuevoUsuario.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\MenuNuevoUsuario.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuPrincipal.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\MenuPrincipal.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\MenuVentas.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\MenuVentas.obj
@@ -12,5 +14,6 @@ E:\Programacion\UTN\TP_Laboratorio\NexaGest\Usuarios.cpp;E:\Programacion\UTN\TP_
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaInicio.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\VentanaInicio.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaInventario.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\VentanaInventario.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\VentanaItems.obj
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerVentas.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\VentanaVerVentas.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\Ventas.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\Ventas.obj
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cpp;E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.obj

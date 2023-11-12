@@ -1,14 +1,18 @@
+#include <vector>
+#include "Items.h"
+#include "Persona.h"
+#include "Usuarios.h"
 #include "Ventas.h"
+using namespace std;
 
 
 
 Ventas::Ventas(){
 
 }
-Ventas::Ventas(int numero, Usuarios usuario, Items productos, float total, bool estado, Fecha fecha){
+Ventas::Ventas(int numero, Usuarios usuario, float total, bool estado, Fecha fecha){
     _numero = numero;
     _usuario = usuario;
-    _productos = productos;
     _total = total;
     _estado = estado;
     _fecha = fecha;
@@ -21,8 +25,13 @@ void Ventas::setUsuario(Usuarios usuario){
     _usuario = usuario;
 
 }
-void Ventas::setProductos(Items productos){
-    _productos = productos;
+void Ventas::setCliente(Clientes cliente) {
+    _cliente = cliente;
+}
+void Ventas::setProductos(Items productosNuevo, int cantidadProd, int indice){
+    //_productos.push_back(productos);
+    _productos[indice] = productosNuevo;
+    _cantidad[indice] = cantidadProd;
 }
 void Ventas::setTotal(float total){
     _total = total;
@@ -39,8 +48,14 @@ int Ventas::getNumero(){
 Usuarios Ventas::getUsuario(){
     return _usuario;
 }
-Items Ventas::getProducto(){
+Clientes Ventas::getCliente() {
+    return _cliente;
+}
+Items* Ventas::getProducto() {
     return _productos;
+}
+int* Ventas::getCantidad() {
+    return _cantidad;
 }
 float Ventas::getTotal(){
     return _total;

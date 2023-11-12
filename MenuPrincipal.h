@@ -3,6 +3,8 @@
 #include "VentanaInventario.h"
 #include "MenuVentas.h"
 #include "MenuNuevoUsuario.h"
+#include "MenuCrearCliente.h"
+#include "VentanaVerVentas.h"
 #include "Usuarios.h"
 
 
@@ -52,11 +54,16 @@ namespace NexaGest {
 		VentanaItems^ ventanaItems = nullptr;
 		MenuVentas^ menuVentas = nullptr;
 		MenuNuevoUsuario^ menuUsuario = nullptr;
+		MenuCrearCliente^ menuCrearCliente = nullptr;
+		VentanaVerVentas^ ventanaVerVentas = nullptr;
 	private: System::Windows::Forms::Label^ labelUsuario;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ labelTipo;
 	private: System::Windows::Forms::Button^ buttonAgregarUsuario;
 	private: System::Windows::Forms::Button^ buttonCerrarSesion;
+	private: System::Windows::Forms::Button^ buttonCrearCliente;
+	private: System::Windows::Forms::Button^ buttonCrearProveedor;
+	private: System::Windows::Forms::Button^ buttonVerVentas;
 
 		   VentanaInventario^ ventanaInventario = nullptr;
 
@@ -78,6 +85,9 @@ namespace NexaGest {
 			this->labelTipo = (gcnew System::Windows::Forms::Label());
 			this->buttonAgregarUsuario = (gcnew System::Windows::Forms::Button());
 			this->buttonCerrarSesion = (gcnew System::Windows::Forms::Button());
+			this->buttonCrearCliente = (gcnew System::Windows::Forms::Button());
+			this->buttonCrearProveedor = (gcnew System::Windows::Forms::Button());
+			this->buttonVerVentas = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// labelBienvenido
@@ -99,7 +109,7 @@ namespace NexaGest {
 			this->buttonIngresarItem->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonIngresarItem->FlatAppearance->BorderSize = 2;
 			this->buttonIngresarItem->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonIngresarItem->Location = System::Drawing::Point(274, 314);
+			this->buttonIngresarItem->Location = System::Drawing::Point(339, 352);
 			this->buttonIngresarItem->Name = L"buttonIngresarItem";
 			this->buttonIngresarItem->Size = System::Drawing::Size(100, 94);
 			this->buttonIngresarItem->TabIndex = 1;
@@ -115,7 +125,7 @@ namespace NexaGest {
 			this->buttonCompra->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonCompra->FlatAppearance->BorderSize = 2;
 			this->buttonCompra->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonCompra->Location = System::Drawing::Point(390, 314);
+			this->buttonCompra->Location = System::Drawing::Point(572, 352);
 			this->buttonCompra->Name = L"buttonCompra";
 			this->buttonCompra->Size = System::Drawing::Size(100, 94);
 			this->buttonCompra->TabIndex = 2;
@@ -130,7 +140,7 @@ namespace NexaGest {
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button3->FlatAppearance->BorderSize = 2;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(507, 314);
+			this->button3->Location = System::Drawing::Point(455, 352);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(100, 94);
 			this->button3->TabIndex = 3;
@@ -146,7 +156,7 @@ namespace NexaGest {
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button4->FlatAppearance->BorderSize = 2;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Location = System::Drawing::Point(624, 314);
+			this->button4->Location = System::Drawing::Point(339, 462);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(100, 94);
 			this->button4->TabIndex = 4;
@@ -196,7 +206,7 @@ namespace NexaGest {
 			this->buttonAgregarUsuario->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonAgregarUsuario->FlatAppearance->BorderSize = 2;
 			this->buttonAgregarUsuario->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonAgregarUsuario->Location = System::Drawing::Point(274, 429);
+			this->buttonAgregarUsuario->Location = System::Drawing::Point(339, 227);
 			this->buttonAgregarUsuario->Name = L"buttonAgregarUsuario";
 			this->buttonAgregarUsuario->Size = System::Drawing::Size(100, 94);
 			this->buttonAgregarUsuario->TabIndex = 8;
@@ -220,6 +230,55 @@ namespace NexaGest {
 			this->buttonCerrarSesion->UseVisualStyleBackColor = false;
 			this->buttonCerrarSesion->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonCerrarSesion_Click);
 			// 
+			// buttonCrearCliente
+			// 
+			this->buttonCrearCliente->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonCrearCliente->BackColor = System::Drawing::Color::SandyBrown;
+			this->buttonCrearCliente->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonCrearCliente.BackgroundImage")));
+			this->buttonCrearCliente->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonCrearCliente->FlatAppearance->BorderSize = 2;
+			this->buttonCrearCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonCrearCliente->Location = System::Drawing::Point(455, 227);
+			this->buttonCrearCliente->Name = L"buttonCrearCliente";
+			this->buttonCrearCliente->Size = System::Drawing::Size(100, 94);
+			this->buttonCrearCliente->TabIndex = 10;
+			this->buttonCrearCliente->UseVisualStyleBackColor = false;
+			this->buttonCrearCliente->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonCrearCliente_Click);
+			// 
+			// buttonCrearProveedor
+			// 
+			this->buttonCrearProveedor->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonCrearProveedor->BackColor = System::Drawing::Color::SandyBrown;
+			this->buttonCrearProveedor->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonCrearProveedor.BackgroundImage")));
+			this->buttonCrearProveedor->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonCrearProveedor->FlatAppearance->BorderSize = 2;
+			this->buttonCrearProveedor->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonCrearProveedor->Location = System::Drawing::Point(572, 227);
+			this->buttonCrearProveedor->Name = L"buttonCrearProveedor";
+			this->buttonCrearProveedor->Size = System::Drawing::Size(100, 94);
+			this->buttonCrearProveedor->TabIndex = 11;
+			this->buttonCrearProveedor->UseVisualStyleBackColor = false;
+			// 
+			// buttonVerVentas
+			// 
+			this->buttonVerVentas->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonVerVentas->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonVerVentas.BackgroundImage")));
+			this->buttonVerVentas->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonVerVentas->FlatAppearance->BorderSize = 2;
+			this->buttonVerVentas->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonVerVentas->Location = System::Drawing::Point(455, 462);
+			this->buttonVerVentas->Name = L"buttonVerVentas";
+			this->buttonVerVentas->Size = System::Drawing::Size(100, 94);
+			this->buttonVerVentas->TabIndex = 12;
+			this->buttonVerVentas->UseVisualStyleBackColor = true;
+			this->buttonVerVentas->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonVerVentas_Click);
+			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -227,6 +286,9 @@ namespace NexaGest {
 			this->BackColor = System::Drawing::Color::SandyBrown;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1020, 768);
+			this->Controls->Add(this->buttonVerVentas);
+			this->Controls->Add(this->buttonCrearProveedor);
+			this->Controls->Add(this->buttonCrearCliente);
 			this->Controls->Add(this->buttonCerrarSesion);
 			this->Controls->Add(this->buttonAgregarUsuario);
 			this->Controls->Add(this->labelTipo);
@@ -258,5 +320,7 @@ namespace NexaGest {
 		Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonAgregarUsuario_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCerrarSesion_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonCrearCliente_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonVerVentas_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
