@@ -8,46 +8,63 @@ using namespace std;
 Proveedores::Proveedores() {
 
 }
-Proveedores::Proveedores(const char* empresa, const char* telefono, const char* direccion, int cuit, int tipoproducto = 0, const char* nombre, const char* apellido, const char* email, int id, bool estado) :Persona(nombre, apellido, email, id, estado) {
-    strcpy(_empresa, empresa);
-    strcpy(_telefono, telefono);
-    strcpy(_direccion, direccion);
-    _cuit = cuit;
-    _tipoProducto = tipoproducto;
-    _totalComprado = 0;
+Proveedores::Proveedores(const char* empresaSet,const char* rubroSet, const char* telefonoSet, const char* direccionSet, const char* contactoSet, const char* cuitSet, bool estadoSet,const char* nombre, const char* apellido, const char* email, int id, bool estado, float totalComprado):Persona(nombre, apellido, email, id, estado) {
+    strcpy(empresa, empresaSet);
+    strcpy(rubro, rubroSet);
+    strcpy(telefono, telefonoSet);
+    strcpy(direccion, direccionSet);
+    strcpy(contacto, contactoSet);
+    strcpy(cuit, cuitSet);
+    activo = estado;
+    _totalComprado = totalComprado;
 }
-void Proveedores::setEmpresa(const char* empresa) {
-    strcpy(_empresa, empresa);
+void Proveedores::setEmpresa(const char* empresaSet) {
+    strcpy(empresa, empresaSet);
 }
-void Proveedores::setTelefono(const char* telefono) {
-    strcpy(_telefono, telefono);
+void Proveedores::setRubro(const char* rubroSet){
+    strcpy(rubro, rubroSet);
 }
-void Proveedores::setDireccion(const char* direccion) {
-    strcpy(_direccion, direccion);
+void Proveedores::setTelefono(const char* telefonoSet) {
+    strcpy(telefono, telefonoSet);
 }
-void Proveedores::setCuit(int cuit) {
-    _cuit = cuit;
+void Proveedores::setDireccion(const char* direccionSet) {
+    strcpy(direccion, direccionSet);
 }
-void Proveedores::setTipoProducto(int tipoproducto) {
-    _tipoProducto = tipoproducto;
+void Proveedores::setContacto(const char* contactoSet){
+    strcpy(contacto, contactoSet);
+}
+void Proveedores::setCuit(const char * cuitSet) {
+    strcpy(cuit, cuitSet);
+}
+void Proveedores::setEstado(bool estado){
+    activo = estado;
 }
 void Proveedores::setTotalComprado(float totalcomprado) {
     _totalComprado = totalcomprado;
 }
+
+
+
 const char* Proveedores::getEmpresa() {
-    return _empresa;
+    return empresa;
+}
+const char* Proveedores::getRubro() {
+    return rubro;
 }
 const char* Proveedores::getTelefono() {
-    return _telefono;
+    return telefono;
 }
 const char* Proveedores::getDireccion() {
-    return _direccion;
+    return direccion;
 }
-int Proveedores::getCuit() {
-    return _cuit;
+const char* Proveedores::getContacto(){
+    return contacto;
 }
-int Proveedores::getTipoProducto() {
-    return _tipoProducto;
+const char* Proveedores::getCuit(){
+    return cuit;
+}
+bool Proveedores::getActivo(){
+    return activo;
 }
 float Proveedores::getTotalComprado() {
     return _totalComprado;
