@@ -122,7 +122,9 @@
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuCompras.cpp" />
     <ClCompile Include="MenuCrearCliente.cpp" />
+    <ClCompile Include="MenuCrearProveedor.cpp" />
     <ClCompile Include="MenuNuevoUsuario.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="MenuVentas.cpp" />
@@ -148,7 +150,13 @@
     <ClInclude Include="Compras.h" />
     <ClInclude Include="Fecha.h" />
     <ClInclude Include="Items.h" />
+    <ClInclude Include="MenuCompras.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MenuCrearCliente.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MenuCrearProveedor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuNuevoUsuario.h">
@@ -178,8 +186,14 @@
     <ClInclude Include="Ventas.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MenuCompras.resx">
+      <DependentUpon>MenuCompras.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuCrearCliente.resx">
       <DependentUpon>MenuCrearCliente.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCrearProveedor.resx">
+      <DependentUpon>MenuCrearProveedor.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuNuevoUsuario.resx">
       <DependentUpon>MenuNuevoUsuario.h</DependentUpon>

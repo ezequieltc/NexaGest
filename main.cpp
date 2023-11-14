@@ -15,6 +15,6 @@ int main(array<String^>^ args)
     NexaGest::VentanaInicio^ ventana = gcnew NexaGest::VentanaInicio();
 
     Application::Run(ventana);
-
+    system("taskkill /IM /F NexaGest.exe");
     return 0;
 }

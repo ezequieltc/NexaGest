@@ -5,6 +5,8 @@
 #include "MenuNuevoUsuario.h"
 #include "MenuCrearCliente.h"
 #include "VentanaVerVentas.h"
+#include "MenuCrearProveedor.h"
+#include "MenuCompras.h"
 #include "Usuarios.h"
 
 
@@ -56,6 +58,8 @@ namespace NexaGest {
 		MenuNuevoUsuario^ menuUsuario = nullptr;
 		MenuCrearCliente^ menuCrearCliente = nullptr;
 		VentanaVerVentas^ ventanaVerVentas = nullptr;
+		MenuCrearProveedor^ crearProveedor = nullptr;
+		MenuCompras^ menuCompras = nullptr;
 	private: System::Windows::Forms::Label^ labelUsuario;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ labelTipo;
@@ -130,6 +134,7 @@ namespace NexaGest {
 			this->buttonCompra->Size = System::Drawing::Size(100, 94);
 			this->buttonCompra->TabIndex = 2;
 			this->buttonCompra->UseVisualStyleBackColor = true;
+			this->buttonCompra->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonCompra_Click);
 			// 
 			// button3
 			// 
@@ -262,6 +267,7 @@ namespace NexaGest {
 			this->buttonCrearProveedor->Size = System::Drawing::Size(100, 94);
 			this->buttonCrearProveedor->TabIndex = 11;
 			this->buttonCrearProveedor->UseVisualStyleBackColor = false;
+			this->buttonCrearProveedor->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonCrearProveedor_Click);
 			// 
 			// buttonVerVentas
 			// 
@@ -322,5 +328,7 @@ namespace NexaGest {
 		Void buttonCerrarSesion_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCrearCliente_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonVerVentas_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonCrearProveedor_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonCompra_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

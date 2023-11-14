@@ -8,13 +8,13 @@ using namespace std;
 Proveedores::Proveedores() {
 
 }
-Proveedores::Proveedores(const char* empresa, const char* telefono, const char* direccion, int cuit, int tipoproducto, float totalcomprado, const char* nombre, const char* apellido, const char* email, int id, bool estado) :Persona(nombre, apellido, email, id, estado) {
+Proveedores::Proveedores(const char* empresa, const char* telefono, const char* direccion, int cuit, int tipoproducto = 0, const char* nombre, const char* apellido, const char* email, int id, bool estado) :Persona(nombre, apellido, email, id, estado) {
     strcpy(_empresa, empresa);
     strcpy(_telefono, telefono);
     strcpy(_direccion, direccion);
     _cuit = cuit;
     _tipoProducto = tipoproducto;
-    _totalComprado = totalcomprado;
+    _totalComprado = 0;
 }
 void Proveedores::setEmpresa(const char* empresa) {
     strcpy(_empresa, empresa);

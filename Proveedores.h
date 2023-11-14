@@ -13,7 +13,7 @@ private:
 
 public:
     Proveedores();
-    Proveedores(const char* empresa, const char* telefono, const char* direccion, int cuit, int tipoproducto, float totalcomprado, const char* nombre, const char* apellido, const char* email, int id, bool estado);
+    Proveedores(const char* empresa, const char* telefono, const char* direccion, int cuit, int tipoproducto = 0, const char* nombre, const char* apellido, const char* email, int id, bool estado);
     void setEmpresa(const char* empresa);
     void setTelefono(const char* telefono);
     void setDireccion(const char* direccion);

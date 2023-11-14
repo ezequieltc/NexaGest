@@ -1417,7 +1417,7 @@
   <data name="buttonCrearCliente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJIAAACoCAYAAAALmrdFAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAMMZJREFUeF7tnQmcTtX/x3+tlhhLzBhbdr9kyc7YC8lOlkQqqVT26iekFAmRlPiH
+        vAAADrwBlbxySQAAMMZJREFUeF7tnQmcTtX/x3+tlhhLzBhbdr9kyc7YC8lOlkQqqVT26iekFAmRlPiH
         ilT27DvZ96WEZJshTIaxZ2f8P+/zPOdpjCEzz2N6ZtzP63Ve99x7zz333HO+57uc8z3n/seBAwcOHDhw
         4MCBAwcOHDhw4MCBAwcOHDhw4MCBAwcOHDhw4MCBAwcOHPgeERERyfbs2RO4cePGAsuWLSv1008/lVu8
         eHHI/PnzK82ZM+exefPmVV60aFG5FStWlNi8eXPesLCwDJGRkfe7H3dwp0EE8ODKlSuLzpgxo+p7773X
@@ -1631,7 +1631,7 @@
   <data name="buttonCrearProveedor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIMAAACbCAYAAABBGCiQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAMe9JREFUeF7tnQWYVkUXxz9b6RKQBqVbGqVbRaRFUlKRUpE0wKAVBQRpEBCQlg4R
+        vAAADrwBlbxySQAAMe9JREFUeF7tnQWYVkUXxz9b6RKQBqVbGqVbRaRFUlKRUpE0wKAVBQRpEBCQlg4R
         kGZp6d5FYFka6fr+v3nvrC+77y7LLrLBe57nPDN3zty5c2fOnJg7d+Z/XvCCF7zgBS94wQte8IIXvOAF
         L3jBC164Nxw5ciTBli1bMs2fP7/U+PHja/Xv37/1l19+2VXwVZs2bb5v167dd+3bt++j6y979uz5yc8/
         /1x71qxZ5deuXZtr7969LzjFeCE6wo4dO9JMmzbt9c8+++zzhg0bjilRosTqFClSXHz22WfvPPXUU3ee
@@ -1850,7 +1850,7 @@
   <data name="buttonVerVentas.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAK0AAACvCAYAAACPZ15IAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAALGlJREFUeF7tnQm8TtX6x2+FlMznnMiUoVCZSoZLCilumZNuc3G7mrtFKlJkakR9
+        vwAADr8BOAVTJAAALGlJREFUeF7tnQm8TtX6x2+FlMznnMiUoVCZSoZLCilumZNuc3G7mrtFKlJkakR9
         Ut1KoRGhiBCZKoUMuUSzyHDMB8cx/n/fdd7n/e/zeo+O47wn57R+n8/zWWuvtfbaa/jtZz9r7bXX/puH
         h4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4fHcYuD
         Bw+ecODAgRP3799/EsdyT3QRHhmDGuyE9CSUxCPG2L1792GkTUpKyn1E7tmz542PPvroILlDJc9K+kn6

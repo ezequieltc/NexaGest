@@ -109,3 +109,24 @@ Void MenuPrincipal::buttonVerVentas_Click(System::Object^ sender, System::EventA
 		ventanaVerVentas->BringToFront();
 	}
 }
+
+
+Void MenuPrincipal::buttonCrearProveedor_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (crearProveedor == nullptr || crearProveedor->IsDisposed) {
+		crearProveedor = gcnew MenuCrearProveedor();
+		crearProveedor->Show();
+	}
+	else {
+		crearProveedor->BringToFront();
+	}
+}
+
+Void MenuPrincipal::buttonCompra_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (menuCompras == nullptr || menuCompras->IsDisposed) {
+		menuCompras = gcnew MenuCompras();
+		menuCompras->Show();
+	}
+	else {
+		menuCompras->BringToFront();
+	}
+}

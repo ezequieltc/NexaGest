@@ -1,4 +1,6 @@
+  NexaGest.MenuCompras.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuCrearCliente.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.MenuCrearProveedor.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuNuevoUsuario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuPrincipal.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuVentas.resources - Embedded, ContainedInManifestFile, 
@@ -47,6 +49,12 @@ Class NexaGest.MenuCrearCliente: AutoLayout, AnsiClass, Class, Public, BeforeFie
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class NexaGest.VentanaVerVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NexaGest.MenuCrearProveedor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NexaGest.MenuCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
