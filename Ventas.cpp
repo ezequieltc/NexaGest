@@ -16,6 +16,11 @@ Ventas::Ventas(int numero, Usuarios usuario, float total, bool estado, Fecha fec
     _total = total;
     _estado = estado;
     _fecha = fecha;
+    for (int i = 0; i < 20; i++) {
+        _cantidad[i] = 0;
+        _productos[i] = Items();
+    }
+
 }
 void Ventas::setNumero(int numero){
     _numero = numero;

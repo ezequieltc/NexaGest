@@ -49,5 +49,5 @@ public:
     int getVentas();
     float getObjetivoVentas();
     const char* getRegion();
-
+    int getId();
 };

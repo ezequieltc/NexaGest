@@ -134,6 +134,7 @@
     <ClCompile Include="VentanaInicio.cpp" />
     <ClCompile Include="VentanaInventario.cpp" />
     <ClCompile Include="VentanaItems.cpp" />
+    <ClCompile Include="VentanaVerCompras.cpp" />
     <ClCompile Include="VentanaVerVentas.cpp" />
     <ClCompile Include="Ventas.cpp" />
   </ItemGroup>
@@ -180,6 +181,9 @@
     <ClInclude Include="VentanaItems.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="VentanaVerCompras.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaVerVentas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -212,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaItems.resx">
       <DependentUpon>VentanaItems.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaVerCompras.resx">
+      <DependentUpon>VentanaVerCompras.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaVerVentas.resx">
       <DependentUpon>VentanaVerVentas.h</DependentUpon>

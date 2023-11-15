@@ -19,6 +19,8 @@ public:
 	std::vector<Usuarios> vectorUsuarios;
 	std::vector<Ventas> vectorVentas;
 	std::vector<Clientes> vectorClientes;
+	std::vector<Proveedores> vectorProveedores;
+	std::vector<Compras> vectorCompras;
 	Archivos();
 	static void verificarArchivos();
 	void cargarVectorItems();
@@ -34,6 +36,10 @@ public:
 	void guardarVectorVentas();
 	void cargarVectorClientes();
 	void guardarVectorClientes();
+	void cargarVectorProveedores();
+	void guardarVectorProveedores();
+	void cargarVectorCompras();
+	void guardarVectorCompras();
 
 };
 

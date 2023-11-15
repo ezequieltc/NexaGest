@@ -17,3 +17,4 @@ E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.MenuCrearCliente.
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.VentanaVerVentas.resources
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.MenuCompras.resources
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.MenuCrearProveedor.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.VentanaVerCompras.resources

@@ -9,28 +9,30 @@ private:
     int _numero;
     Proveedores _Proveedor;
     Usuarios _Comprador;
-    Items _Items;
+    Items _productos[20];
+    int _cantidad[20];
     float _total;
     Fecha _fechaIngreso;
     bool _estado;
 
 public:
     Compras();
-    Compras(int numero, Proveedores proveedores, Usuarios comprador, Items items, float total, Fecha fechaIngreso, bool estado);
+    Compras(int numero, Usuarios comprador, float total, Fecha fechaIngreso, bool estado);
     int getNumero();
     Proveedores getProveedor();
     Usuarios getComprador();
-    Items getItems();
     float getTotal();
     Fecha getFechaIngreso();
     bool getEstado();
     void setNumero(int numero);
+    void setProductos(Items productosNuevo, int cantidadProd, int indice);
     void setProveedor(Proveedores proveedor);
     void setComprador(Usuarios comprador);
-    void setItems(Items items);
     void setTotal(float total);
     void setFechaIngreso(Fecha fechaIngreso);
     void setEstado(bool estado);
+    Items* getProducto();
+    int* getCantidad();
 
 
 };

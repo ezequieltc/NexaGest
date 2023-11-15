@@ -130,3 +130,14 @@ Void MenuPrincipal::buttonCompra_Click(System::Object^ sender, System::EventArgs
 		menuCompras->BringToFront();
 	}
 }
+
+
+Void MenuPrincipal::buttonVerCompras_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (ventanaVerCompras == nullptr || ventanaVerCompras->IsDisposed) {
+		ventanaVerCompras = gcnew VentanaVerCompras();
+		ventanaVerCompras->Show();
+	}
+	else {
+		ventanaVerCompras->BringToFront();
+	}
+}

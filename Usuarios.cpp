@@ -18,7 +18,6 @@ Usuarios::Usuarios(const char* usuario, const char* contrasena, bool crearUser, 
     _tipo = tipo;
     _compras = 0;
     _ventas = 0;
-    _objetivoVentas = 0;
 }
 const char* Usuarios::getContrasena() {
     return _contrasena;
@@ -106,4 +105,8 @@ float Usuarios::getObjetivoVentas() {
 }
 const char* Usuarios::getRegion() {
     return _region;
+}
+
+int Usuarios::getId() {
+    return Persona::getId();
 }

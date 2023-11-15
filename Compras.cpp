@@ -6,14 +6,17 @@ using namespace std;
 Compras::Compras() {
 
 }
-Compras::Compras(int numero, Proveedores proveedores, Usuarios comprador, Items items, float total, Fecha fechaIngreso, bool estado) {
+Compras::Compras(int numero, Usuarios comprador, float total, Fecha fechaIngreso, bool estado) {
     _numero = numero;
-    _Proveedor = proveedores;
     _Comprador = comprador;
-    _Items = items;
     _total = total;
     _fechaIngreso = fechaIngreso;
     _estado = estado;
+    for (int i = 0; i < 20; i++) {
+        _cantidad[i] = 0;
+        _productos[i] = Items();
+    }
+
 
 }
 int Compras::getNumero() {
@@ -24,9 +27,6 @@ Proveedores Compras::getProveedor() {
 }
 Usuarios Compras::getComprador() {
     return _Comprador;
-}
-Items Compras::getItems() {
-    return _Items;
 }
 float Compras::getTotal() {
     return _total;
@@ -46,9 +46,6 @@ void Compras::setProveedor(Proveedores proveedor) {
 void Compras::setComprador(Usuarios comprador) {
     _Comprador = comprador;
 }
-void Compras::setItems(Items items) {
-    _Items = items;
-}
 void Compras::setTotal(float total) {
     _total = total;
 }
@@ -57,4 +54,9 @@ void Compras::setFechaIngreso(Fecha fechaIngreso) {
 }
 void Compras::setEstado(bool estado) {
     _estado = estado;
+}
+
+void Compras::setProductos(Items productosNuevo, int cantidadProd, int indice) {
+    _productos[indice] = productosNuevo;
+    _cantidad[indice] = cantidadProd;
 }

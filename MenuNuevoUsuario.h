@@ -15,13 +15,9 @@ namespace NexaGest {
 	public ref class MenuNuevoUsuario : public System::Windows::Forms::Form
 	{
 	public:
-		MenuNuevoUsuario(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
-		}
+		MenuNuevoUsuario();
+		void actualizarListado();
+		void limpiarValores();
 
 	protected:
 		/// <summary>
@@ -58,6 +54,21 @@ namespace NexaGest {
 	private: System::Windows::Forms::ComboBox^ comboBoxTipo;
 
 	private: System::Windows::Forms::TextBox^ textBoxObjetivo;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
+
+
+
+
+
+	private: System::Windows::Forms::Button^ buttonEliminar;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Nombre;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Apellido;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Email;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Usuario;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Contrasena;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Tipo;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ID;
 
 
 
@@ -96,6 +107,16 @@ namespace NexaGest {
 			this->textBoxContrasena = (gcnew System::Windows::Forms::TextBox());
 			this->comboBoxTipo = (gcnew System::Windows::Forms::ComboBox());
 			this->textBoxObjetivo = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->buttonEliminar = (gcnew System::Windows::Forms::Button());
+			this->Nombre = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Apellido = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Email = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Usuario = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Contrasena = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Tipo = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ID = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -295,11 +316,73 @@ namespace NexaGest {
 			this->textBoxObjetivo->TabIndex = 21;
 			this->textBoxObjetivo->Visible = false;
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->AllowUserToDeleteRows = false;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+				this->Nombre,
+					this->Apellido, this->Email, this->Usuario, this->Contrasena, this->Tipo, this->ID
+			});
+			this->dataGridView1->Location = System::Drawing::Point(357, 72);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(682, 358);
+			this->dataGridView1->TabIndex = 22;
+			// 
+			// buttonEliminar
+			// 
+			this->buttonEliminar->Location = System::Drawing::Point(357, 13);
+			this->buttonEliminar->Name = L"buttonEliminar";
+			this->buttonEliminar->Size = System::Drawing::Size(107, 41);
+			this->buttonEliminar->TabIndex = 23;
+			this->buttonEliminar->Text = L"Eliminar";
+			this->buttonEliminar->UseVisualStyleBackColor = true;
+			this->buttonEliminar->Click += gcnew System::EventHandler(this, &MenuNuevoUsuario::buttonEliminar_Click);
+			// 
+			// Nombre
+			// 
+			this->Nombre->HeaderText = L"Nombre";
+			this->Nombre->Name = L"Nombre";
+			// 
+			// Apellido
+			// 
+			this->Apellido->HeaderText = L"Apellido";
+			this->Apellido->Name = L"Apellido";
+			// 
+			// Email
+			// 
+			this->Email->HeaderText = L"Email";
+			this->Email->Name = L"Email";
+			// 
+			// Usuario
+			// 
+			this->Usuario->HeaderText = L"Usuario";
+			this->Usuario->Name = L"Usuario";
+			// 
+			// Contrasena
+			// 
+			this->Contrasena->HeaderText = L"Contraseña";
+			this->Contrasena->Name = L"Contrasena";
+			// 
+			// Tipo
+			// 
+			this->Tipo->HeaderText = L"Tipo";
+			this->Tipo->Name = L"Tipo";
+			// 
+			// ID
+			// 
+			this->ID->HeaderText = L"ID";
+			this->ID->Name = L"ID";
+			this->ID->Visible = false;
+			// 
 			// MenuNuevoUsuario
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(330, 442);
+			this->ClientSize = System::Drawing::Size(1051, 442);
+			this->Controls->Add(this->buttonEliminar);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->textBoxObjetivo);
 			this->Controls->Add(this->comboBoxTipo);
 			this->Controls->Add(this->textBoxContrasena);
@@ -325,6 +408,7 @@ namespace NexaGest {
 			this->Name = L"MenuNuevoUsuario";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MenuNuevoUsuario";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -332,5 +416,6 @@ namespace NexaGest {
 #pragma endregion
 		Void buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonEliminar_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

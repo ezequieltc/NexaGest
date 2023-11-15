@@ -7,6 +7,7 @@
   NexaGest.VentanaInicio.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaInventario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaItems.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.VentanaVerCompras.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaVerVentas.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly NexaGest, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
@@ -45,6 +46,9 @@ Class NexaGest.MenuVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class NexaGest.MenuNuevoUsuario: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarListado(): PrivateScope, Public, HideBySig
+    limpiarValores(): PrivateScope, Public, HideBySig
 Class NexaGest.MenuCrearCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -55,6 +59,12 @@ Class NexaGest.MenuCrearProveedor: AutoLayout, AnsiClass, Class, Public, BeforeF
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class NexaGest.MenuCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarValores(): PrivateScope, Public, HideBySig
+    actualizarVista(): PrivateScope, Public, HideBySig
+Class NexaGest.VentanaVerCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

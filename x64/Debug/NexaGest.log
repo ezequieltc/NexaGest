@@ -1,12 +1,4 @@
-﻿  main.cpp
+﻿  VentanaItems.cpp
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-  MenuCompras.cpp
-  MenuCrearProveedor.cpp
-  MenuPrincipal.cpp
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-  VentanaInicio.cpp
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaInicio.cpp(26,14): warning C4101: 'userr': variable local sin referencia
-  Generando código...
   Archivos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   NexaGest.vcxproj -> E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.exe

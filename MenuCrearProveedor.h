@@ -46,7 +46,7 @@ namespace NexaGest {
 	private: System::Windows::Forms::Button^ buttonCancelar;
 	private: System::Windows::Forms::Button^ buttonAgregar;
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::CheckBox^ checkBoxConsumidorFinal;
+
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label3;
@@ -77,7 +77,6 @@ namespace NexaGest {
 			this->buttonCancelar = (gcnew System::Windows::Forms::Button());
 			this->buttonAgregar = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->checkBoxConsumidorFinal = (gcnew System::Windows::Forms::CheckBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -172,16 +171,6 @@ namespace NexaGest {
 			this->label7->TabIndex = 52;
 			this->label7->Text = L"CUIT:";
 			// 
-			// checkBoxConsumidorFinal
-			// 
-			this->checkBoxConsumidorFinal->AutoSize = true;
-			this->checkBoxConsumidorFinal->Location = System::Drawing::Point(28, 237);
-			this->checkBoxConsumidorFinal->Name = L"checkBoxConsumidorFinal";
-			this->checkBoxConsumidorFinal->Size = System::Drawing::Size(106, 17);
-			this->checkBoxConsumidorFinal->TabIndex = 51;
-			this->checkBoxConsumidorFinal->Text = L"Consumidor Final";
-			this->checkBoxConsumidorFinal->UseVisualStyleBackColor = true;
-			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
@@ -243,7 +232,6 @@ namespace NexaGest {
 			this->Controls->Add(this->buttonCancelar);
 			this->Controls->Add(this->buttonAgregar);
 			this->Controls->Add(this->label7);
-			this->Controls->Add(this->checkBoxConsumidorFinal);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);

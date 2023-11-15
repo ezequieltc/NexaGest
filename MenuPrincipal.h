@@ -7,6 +7,7 @@
 #include "VentanaVerVentas.h"
 #include "MenuCrearProveedor.h"
 #include "MenuCompras.h"
+#include "VentanaVerCompras.h"
 #include "Usuarios.h"
 
 
@@ -60,6 +61,7 @@ namespace NexaGest {
 		VentanaVerVentas^ ventanaVerVentas = nullptr;
 		MenuCrearProveedor^ crearProveedor = nullptr;
 		MenuCompras^ menuCompras = nullptr;
+		VentanaVerCompras^ ventanaVerCompras = nullptr;
 	private: System::Windows::Forms::Label^ labelUsuario;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ labelTipo;
@@ -68,6 +70,16 @@ namespace NexaGest {
 	private: System::Windows::Forms::Button^ buttonCrearCliente;
 	private: System::Windows::Forms::Button^ buttonCrearProveedor;
 	private: System::Windows::Forms::Button^ buttonVerVentas;
+	private: System::Windows::Forms::Button^ buttonVerCompras;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label10;
 
 		   VentanaInventario^ ventanaInventario = nullptr;
 
@@ -92,6 +104,16 @@ namespace NexaGest {
 			this->buttonCrearCliente = (gcnew System::Windows::Forms::Button());
 			this->buttonCrearProveedor = (gcnew System::Windows::Forms::Button());
 			this->buttonVerVentas = (gcnew System::Windows::Forms::Button());
+			this->buttonVerCompras = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// labelBienvenido
@@ -113,7 +135,7 @@ namespace NexaGest {
 			this->buttonIngresarItem->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonIngresarItem->FlatAppearance->BorderSize = 2;
 			this->buttonIngresarItem->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonIngresarItem->Location = System::Drawing::Point(339, 352);
+			this->buttonIngresarItem->Location = System::Drawing::Point(299, 352);
 			this->buttonIngresarItem->Name = L"buttonIngresarItem";
 			this->buttonIngresarItem->Size = System::Drawing::Size(100, 94);
 			this->buttonIngresarItem->TabIndex = 1;
@@ -129,7 +151,7 @@ namespace NexaGest {
 			this->buttonCompra->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonCompra->FlatAppearance->BorderSize = 2;
 			this->buttonCompra->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonCompra->Location = System::Drawing::Point(572, 352);
+			this->buttonCompra->Location = System::Drawing::Point(609, 352);
 			this->buttonCompra->Name = L"buttonCompra";
 			this->buttonCompra->Size = System::Drawing::Size(100, 94);
 			this->buttonCompra->TabIndex = 2;
@@ -161,7 +183,7 @@ namespace NexaGest {
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button4->FlatAppearance->BorderSize = 2;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Location = System::Drawing::Point(339, 462);
+			this->button4->Location = System::Drawing::Point(299, 483);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(100, 94);
 			this->button4->TabIndex = 4;
@@ -211,7 +233,7 @@ namespace NexaGest {
 			this->buttonAgregarUsuario->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonAgregarUsuario->FlatAppearance->BorderSize = 2;
 			this->buttonAgregarUsuario->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonAgregarUsuario->Location = System::Drawing::Point(339, 227);
+			this->buttonAgregarUsuario->Location = System::Drawing::Point(299, 221);
 			this->buttonAgregarUsuario->Name = L"buttonAgregarUsuario";
 			this->buttonAgregarUsuario->Size = System::Drawing::Size(100, 94);
 			this->buttonAgregarUsuario->TabIndex = 8;
@@ -245,7 +267,7 @@ namespace NexaGest {
 			this->buttonCrearCliente->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonCrearCliente->FlatAppearance->BorderSize = 2;
 			this->buttonCrearCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonCrearCliente->Location = System::Drawing::Point(455, 227);
+			this->buttonCrearCliente->Location = System::Drawing::Point(455, 221);
 			this->buttonCrearCliente->Name = L"buttonCrearCliente";
 			this->buttonCrearCliente->Size = System::Drawing::Size(100, 94);
 			this->buttonCrearCliente->TabIndex = 10;
@@ -262,7 +284,7 @@ namespace NexaGest {
 			this->buttonCrearProveedor->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonCrearProveedor->FlatAppearance->BorderSize = 2;
 			this->buttonCrearProveedor->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonCrearProveedor->Location = System::Drawing::Point(572, 227);
+			this->buttonCrearProveedor->Location = System::Drawing::Point(609, 221);
 			this->buttonCrearProveedor->Name = L"buttonCrearProveedor";
 			this->buttonCrearProveedor->Size = System::Drawing::Size(100, 94);
 			this->buttonCrearProveedor->TabIndex = 11;
@@ -278,12 +300,127 @@ namespace NexaGest {
 			this->buttonVerVentas->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->buttonVerVentas->FlatAppearance->BorderSize = 2;
 			this->buttonVerVentas->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->buttonVerVentas->Location = System::Drawing::Point(455, 462);
+			this->buttonVerVentas->Location = System::Drawing::Point(455, 483);
 			this->buttonVerVentas->Name = L"buttonVerVentas";
 			this->buttonVerVentas->Size = System::Drawing::Size(100, 94);
 			this->buttonVerVentas->TabIndex = 12;
 			this->buttonVerVentas->UseVisualStyleBackColor = true;
 			this->buttonVerVentas->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonVerVentas_Click);
+			// 
+			// buttonVerCompras
+			// 
+			this->buttonVerCompras->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonVerCompras->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonVerCompras.BackgroundImage")));
+			this->buttonVerCompras->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonVerCompras->FlatAppearance->BorderSize = 2;
+			this->buttonVerCompras->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonVerCompras->Location = System::Drawing::Point(609, 483);
+			this->buttonVerCompras->Name = L"buttonVerCompras";
+			this->buttonVerCompras->Size = System::Drawing::Size(100, 94);
+			this->buttonVerCompras->TabIndex = 13;
+			this->buttonVerCompras->UseVisualStyleBackColor = true;
+			this->buttonVerCompras->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonVerCompras_Click);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(286, 318);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(128, 15);
+			this->label2->TabIndex = 14;
+			this->label2->Text = L"INGRESAR USUARIO";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(444, 318);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(123, 15);
+			this->label3->TabIndex = 15;
+			this->label3->Text = L"INGRESAR CLIENTE";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(585, 318);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(145, 15);
+			this->label4->TabIndex = 16;
+			this->label4->Text = L"INGRESAR PROVEEDOR";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(297, 449);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(102, 15);
+			this->label5->TabIndex = 17;
+			this->label5->Text = L"INGRESAR ITEM";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(307, 580);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(82, 15);
+			this->label6->TabIndex = 18;
+			this->label6->Text = L"INVENTARIO";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(444, 449);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(113, 15);
+			this->label7->TabIndex = 19;
+			this->label7->Text = L"INGRESAR VENTA";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(439, 580);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(133, 15);
+			this->label8->TabIndex = 20;
+			this->label8->Text = L"CONSULTAR VENTAS";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(602, 449);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(126, 15);
+			this->label9->TabIndex = 21;
+			this->label9->Text = L"INGRESAR COMPRA";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Roboto", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->Location = System::Drawing::Point(585, 580);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(146, 15);
+			this->label10->TabIndex = 22;
+			this->label10->Text = L"CONSULTAR COMPRAS";
 			// 
 			// MenuPrincipal
 			// 
@@ -292,6 +429,16 @@ namespace NexaGest {
 			this->BackColor = System::Drawing::Color::SandyBrown;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1020, 768);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->buttonVerCompras);
 			this->Controls->Add(this->buttonVerVentas);
 			this->Controls->Add(this->buttonCrearProveedor);
 			this->Controls->Add(this->buttonCrearCliente);
@@ -330,5 +477,6 @@ namespace NexaGest {
 		Void buttonVerVentas_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCrearProveedor_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCompra_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonVerCompras_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

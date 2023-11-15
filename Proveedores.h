@@ -16,7 +16,7 @@ private:
 
 public:
     Proveedores();
-    Proveedores(const char* empresaSet,const char* rubroSet, const char* telefonoSet, const char* direccionSet, const char* contactoSet, const char* cuitSet, bool estadoSet,const char* nombre, const char* apellido, const char* email, int id, bool estado, float totalComprado);
+    Proveedores(const char* empresaSet,const char* rubroSet, const char* telefonoSet, const char* direccionSet, const char* contactoSet, const char* cuitSet, bool estadoSet,const char* nombre, const char* apellido, const char* email, int id, bool estado);
     
     void setEmpresa(const char* empresa);
     void setRubro(const char* rubroSet);

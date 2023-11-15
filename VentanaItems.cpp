@@ -6,6 +6,7 @@
 #include "Archivos.h"
 #include <iostream>
 #include <cstring>
+#include <cctype>
 #include <msclr/marshal_cppstd.h>
 using namespace std;
 using namespace NexaGest;

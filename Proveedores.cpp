@@ -8,7 +8,7 @@ using namespace std;
 Proveedores::Proveedores() {
 
 }
-Proveedores::Proveedores(const char* empresaSet,const char* rubroSet, const char* telefonoSet, const char* direccionSet, const char* contactoSet, const char* cuitSet, bool estadoSet,const char* nombre, const char* apellido, const char* email, int id, bool estado, float totalComprado):Persona(nombre, apellido, email, id, estado) {
+Proveedores::Proveedores(const char* empresaSet,const char* rubroSet, const char* telefonoSet, const char* direccionSet, const char* contactoSet, const char* cuitSet, bool estadoSet,const char* nombre, const char* apellido, const char* email, int id, bool estado):Persona(nombre, apellido, email, id, estado) {
     strcpy(empresa, empresaSet);
     strcpy(rubro, rubroSet);
     strcpy(telefono, telefonoSet);
@@ -16,7 +16,7 @@ Proveedores::Proveedores(const char* empresaSet,const char* rubroSet, const char
     strcpy(contacto, contactoSet);
     strcpy(cuit, cuitSet);
     activo = estado;
-    _totalComprado = totalComprado;
+    _totalComprado = 0;
 }
 void Proveedores::setEmpresa(const char* empresaSet) {
     strcpy(empresa, empresaSet);

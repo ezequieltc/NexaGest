@@ -118,12 +118,49 @@ void Archivos::guardarVectorClientes() {
 	fclose(p);
 }
 
+void Archivos::cargarVectorProveedores() {
+	FILE* p;
+	p = fopen("./files/Proveedores.gest", "rb");
+	Proveedores proveedor;
+	while (fread(&proveedor, sizeof(Proveedores), 1, p) == 1) {
+		vectorProveedores.push_back(proveedor);
+	}
+	fclose(p);
+}
+void Archivos::guardarVectorProveedores() {
+	FILE* p;
+	p = fopen("./files/Proveedores.gest", "wb");
+	Proveedores proveedor;
+	for (int i = 0; i < vectorProveedores.size(); i++) {
+		fwrite(&vectorProveedores[i], sizeof(Proveedores), 1, p);
+	}
+	fclose(p);
+}
+
+void Archivos::cargarVectorCompras() {
+	FILE* p;
+	p = fopen("./files/Compras.gest", "rb");
+	Compras compra;
+	while (fread(&compra, sizeof(Compras), 1, p) == 1) {
+		vectorCompras.push_back(compra);
+	}
+	fclose(p);
+}
+void Archivos::guardarVectorCompras() {
+	FILE* p;
+	p = fopen("./files/Compras.gest", "wb");
+	Compras compra;
+	for (int i = 0; i < vectorCompras.size(); i++) {
+		fwrite(&vectorCompras[i], sizeof(Compras), 1, p);
+	}
+	fclose(p);
+}
 void Archivos::verificarArchivos() {
 	if (fopen("./files/Usuarios.gest", "rb") == NULL) {
 		FILE* p;
 		cout << "El archivo no existe, se creara" << endl;
 		p = fopen("./files/Usuarios.gest", "wb");
-		Usuarios user("admin", "admin", true, true, true, true, true, true, 1, true, "Administrado", "", "", 1, true);
+		Usuarios user("admin", "admin", true, true, true, true, true, true, 1, true, "Administrador", "", "", 1, true);
 		fwrite(&user, sizeof(Usuarios), 1, p);
 		fclose(p);
 	}

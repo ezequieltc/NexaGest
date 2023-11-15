@@ -15,13 +15,9 @@ namespace NexaGest {
 	public ref class MenuCompras : public System::Windows::Forms::Form
 	{
 	public:
-		MenuCompras(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
-		}
+		MenuCompras();
+		void actualizarValores();
+		void actualizarVista();
 
 	protected:
 		/// <summary>
@@ -34,6 +30,7 @@ namespace NexaGest {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	protected:
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Nombre;
@@ -71,6 +68,9 @@ namespace NexaGest {
 		/// Variable del diseñador necesaria.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+		float totalNeto = 0;
+		float iva = 0;
+		float total = 0;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -220,6 +220,7 @@ namespace NexaGest {
 			this->buttonCancelar->TabIndex = 42;
 			this->buttonCancelar->Text = L"Cancelar";
 			this->buttonCancelar->UseVisualStyleBackColor = true;
+			this->buttonCancelar->Click += gcnew System::EventHandler(this, &MenuCompras::buttonCancelar_Click);
 			// 
 			// buttonGuardar
 			// 
@@ -230,6 +231,7 @@ namespace NexaGest {
 			this->buttonGuardar->TabIndex = 41;
 			this->buttonGuardar->Text = L"Guardar";
 			this->buttonGuardar->UseVisualStyleBackColor = true;
+			this->buttonGuardar->Click += gcnew System::EventHandler(this, &MenuCompras::buttonGuardar_Click);
 			// 
 			// labelVendedor
 			// 
@@ -316,6 +318,7 @@ namespace NexaGest {
 			this->buttonEliminar->TabIndex = 33;
 			this->buttonEliminar->Text = L"Eliminar Item";
 			this->buttonEliminar->UseVisualStyleBackColor = true;
+			this->buttonEliminar->Click += gcnew System::EventHandler(this, &MenuCompras::buttonEliminar_Click);
 			// 
 			// buttonAgregar
 			// 
@@ -326,6 +329,7 @@ namespace NexaGest {
 			this->buttonAgregar->TabIndex = 32;
 			this->buttonAgregar->Text = L"Agregar Item";
 			this->buttonAgregar->UseVisualStyleBackColor = true;
+			this->buttonAgregar->Click += gcnew System::EventHandler(this, &MenuCompras::buttonAgregar_Click);
 			// 
 			// label4
 			// 
@@ -435,5 +439,9 @@ namespace NexaGest {
 
 		}
 #pragma endregion
-	};
+		Void buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonEliminar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonGuardar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }
