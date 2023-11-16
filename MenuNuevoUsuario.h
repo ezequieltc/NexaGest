@@ -108,7 +108,6 @@ namespace NexaGest {
 			this->comboBoxTipo = (gcnew System::Windows::Forms::ComboBox());
 			this->textBoxObjetivo = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->buttonEliminar = (gcnew System::Windows::Forms::Button());
 			this->Nombre = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Apellido = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Email = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -116,6 +115,7 @@ namespace NexaGest {
 			this->Contrasena = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Tipo = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->ID = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->buttonEliminar = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -307,6 +307,7 @@ namespace NexaGest {
 			this->comboBoxTipo->Name = L"comboBoxTipo";
 			this->comboBoxTipo->Size = System::Drawing::Size(146, 21);
 			this->comboBoxTipo->TabIndex = 20;
+			this->comboBoxTipo->SelectedIndexChanged += gcnew System::EventHandler(this, &MenuNuevoUsuario::comboBoxTipo_SelectedIndexChanged);
 			// 
 			// textBoxObjetivo
 			// 
@@ -329,16 +330,6 @@ namespace NexaGest {
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(682, 358);
 			this->dataGridView1->TabIndex = 22;
-			// 
-			// buttonEliminar
-			// 
-			this->buttonEliminar->Location = System::Drawing::Point(357, 13);
-			this->buttonEliminar->Name = L"buttonEliminar";
-			this->buttonEliminar->Size = System::Drawing::Size(107, 41);
-			this->buttonEliminar->TabIndex = 23;
-			this->buttonEliminar->Text = L"Eliminar";
-			this->buttonEliminar->UseVisualStyleBackColor = true;
-			this->buttonEliminar->Click += gcnew System::EventHandler(this, &MenuNuevoUsuario::buttonEliminar_Click);
 			// 
 			// Nombre
 			// 
@@ -375,6 +366,16 @@ namespace NexaGest {
 			this->ID->HeaderText = L"ID";
 			this->ID->Name = L"ID";
 			this->ID->Visible = false;
+			// 
+			// buttonEliminar
+			// 
+			this->buttonEliminar->Location = System::Drawing::Point(357, 13);
+			this->buttonEliminar->Name = L"buttonEliminar";
+			this->buttonEliminar->Size = System::Drawing::Size(107, 41);
+			this->buttonEliminar->TabIndex = 23;
+			this->buttonEliminar->Text = L"Eliminar";
+			this->buttonEliminar->UseVisualStyleBackColor = true;
+			this->buttonEliminar->Click += gcnew System::EventHandler(this, &MenuNuevoUsuario::buttonEliminar_Click);
 			// 
 			// MenuNuevoUsuario
 			// 
@@ -417,5 +418,6 @@ namespace NexaGest {
 		Void buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonEliminar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void comboBoxTipo_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 };
 }

@@ -43,9 +43,10 @@ namespace NexaGest {
 	private: System::Windows::Forms::Label^ labelBienvenido;
 	private: System::Windows::Forms::Button^ buttonIngresarItem;
 	private: System::Windows::Forms::Button^ buttonCompra;
+	private: System::Windows::Forms::Button^ buttonVenta;
 
 
-	private: System::Windows::Forms::Button^ button3;
+
 	private: System::Windows::Forms::Button^ button4;
 	protected:
 
@@ -94,7 +95,7 @@ namespace NexaGest {
 			this->labelBienvenido = (gcnew System::Windows::Forms::Label());
 			this->buttonIngresarItem = (gcnew System::Windows::Forms::Button());
 			this->buttonCompra = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->buttonVenta = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->labelUsuario = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -133,6 +134,7 @@ namespace NexaGest {
 			this->buttonIngresarItem->BackColor = System::Drawing::Color::SandyBrown;
 			this->buttonIngresarItem->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonIngresarItem.BackgroundImage")));
 			this->buttonIngresarItem->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonIngresarItem->Enabled = false;
 			this->buttonIngresarItem->FlatAppearance->BorderSize = 2;
 			this->buttonIngresarItem->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonIngresarItem->Location = System::Drawing::Point(299, 352);
@@ -149,6 +151,7 @@ namespace NexaGest {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->buttonCompra->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonCompra.BackgroundImage")));
 			this->buttonCompra->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonCompra->Enabled = false;
 			this->buttonCompra->FlatAppearance->BorderSize = 2;
 			this->buttonCompra->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonCompra->Location = System::Drawing::Point(609, 352);
@@ -158,21 +161,22 @@ namespace NexaGest {
 			this->buttonCompra->UseVisualStyleBackColor = true;
 			this->buttonCompra->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonCompra_Click);
 			// 
-			// button3
+			// buttonVenta
 			// 
-			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+			this->buttonVenta->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button3->FlatAppearance->BorderSize = 2;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(455, 352);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(100, 94);
-			this->button3->TabIndex = 3;
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MenuPrincipal::button3_Click);
+			this->buttonVenta->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonVenta.BackgroundImage")));
+			this->buttonVenta->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonVenta->Enabled = false;
+			this->buttonVenta->FlatAppearance->BorderSize = 2;
+			this->buttonVenta->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonVenta->Location = System::Drawing::Point(455, 352);
+			this->buttonVenta->Name = L"buttonVenta";
+			this->buttonVenta->Size = System::Drawing::Size(100, 94);
+			this->buttonVenta->TabIndex = 3;
+			this->buttonVenta->UseVisualStyleBackColor = true;
+			this->buttonVenta->Click += gcnew System::EventHandler(this, &MenuPrincipal::buttonVenta_Click);
 			// 
 			// button4
 			// 
@@ -231,6 +235,7 @@ namespace NexaGest {
 			this->buttonAgregarUsuario->BackColor = System::Drawing::Color::SandyBrown;
 			this->buttonAgregarUsuario->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonAgregarUsuario.BackgroundImage")));
 			this->buttonAgregarUsuario->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonAgregarUsuario->Enabled = false;
 			this->buttonAgregarUsuario->FlatAppearance->BorderSize = 2;
 			this->buttonAgregarUsuario->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonAgregarUsuario->Location = System::Drawing::Point(299, 221);
@@ -265,6 +270,7 @@ namespace NexaGest {
 			this->buttonCrearCliente->BackColor = System::Drawing::Color::SandyBrown;
 			this->buttonCrearCliente->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonCrearCliente.BackgroundImage")));
 			this->buttonCrearCliente->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonCrearCliente->Enabled = false;
 			this->buttonCrearCliente->FlatAppearance->BorderSize = 2;
 			this->buttonCrearCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonCrearCliente->Location = System::Drawing::Point(455, 221);
@@ -282,6 +288,7 @@ namespace NexaGest {
 			this->buttonCrearProveedor->BackColor = System::Drawing::Color::SandyBrown;
 			this->buttonCrearProveedor->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonCrearProveedor.BackgroundImage")));
 			this->buttonCrearProveedor->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonCrearProveedor->Enabled = false;
 			this->buttonCrearProveedor->FlatAppearance->BorderSize = 2;
 			this->buttonCrearProveedor->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonCrearProveedor->Location = System::Drawing::Point(609, 221);
@@ -298,6 +305,7 @@ namespace NexaGest {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->buttonVerVentas->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonVerVentas.BackgroundImage")));
 			this->buttonVerVentas->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonVerVentas->Enabled = false;
 			this->buttonVerVentas->FlatAppearance->BorderSize = 2;
 			this->buttonVerVentas->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonVerVentas->Location = System::Drawing::Point(455, 483);
@@ -314,6 +322,7 @@ namespace NexaGest {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->buttonVerCompras->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonVerCompras.BackgroundImage")));
 			this->buttonVerCompras->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->buttonVerCompras->Enabled = false;
 			this->buttonVerCompras->FlatAppearance->BorderSize = 2;
 			this->buttonVerCompras->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonVerCompras->Location = System::Drawing::Point(609, 483);
@@ -448,7 +457,7 @@ namespace NexaGest {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->labelUsuario);
 			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button3);
+			this->Controls->Add(this->buttonVenta);
 			this->Controls->Add(this->buttonCompra);
 			this->Controls->Add(this->buttonIngresarItem);
 			this->Controls->Add(this->labelBienvenido);
@@ -470,7 +479,6 @@ namespace NexaGest {
 		Void buttonIngresarItem_Click(Object^ sender, EventArgs^ e);
 		Void MenuCierra(Object^ sender, FormClosedEventArgs^ e);
 		Void botonInventario(System::Object^ sender, System::EventArgs^ e);
-		Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonAgregarUsuario_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCerrarSesion_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCrearCliente_Click(System::Object^ sender, System::EventArgs^ e);
@@ -478,5 +486,6 @@ namespace NexaGest {
 		Void buttonCrearProveedor_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCompra_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonVerCompras_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonVenta_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

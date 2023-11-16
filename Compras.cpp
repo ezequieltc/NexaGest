@@ -60,3 +60,10 @@ void Compras::setProductos(Items productosNuevo, int cantidadProd, int indice) {
     _productos[indice] = productosNuevo;
     _cantidad[indice] = cantidadProd;
 }
+
+Items* Compras::getProducto() {
+    return _productos;
+}
+int* Compras::getCantidad() {
+    return _cantidad;
+}

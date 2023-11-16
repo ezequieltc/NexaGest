@@ -9,7 +9,7 @@
 using namespace std;
 using namespace NexaGest;
 
-MenuPrincipal::MenuPrincipal(){
+MenuPrincipal::MenuPrincipal() {
 	InitializeComponent();
 	Usuarios userConectado = Archivos::getUsuarioConectado();
 	String^ user = String::Concat(gcnew String(userConectado.getNombre()), " ", gcnew String(userConectado.getApellido()));
@@ -26,17 +26,66 @@ MenuPrincipal::MenuPrincipal(){
 		break;
 	}
 
-	if (userConectado.getTipo() == 1) {
+	if (userConectado.getCrearCliente()) {
+		buttonCrearCliente->Enabled = true;
+		buttonCrearCliente->BackColor = Drawing::Color::SandyBrown;
+	}
+	else
+	{
+		buttonCrearCliente->Enabled = false;
+		buttonCrearCliente->BackColor = Drawing::Color::PeachPuff;
+	}
+
+	if (userConectado.getCrearItem()) {
+		buttonIngresarItem->Enabled = true;
+		buttonIngresarItem->BackColor = Drawing::Color::SandyBrown;
+	}
+	else {
+		buttonIngresarItem->Enabled = false;
+		buttonIngresarItem->BackColor = Drawing::Color::PeachPuff;
+	}
+
+	if (userConectado.getCrearProveedor()) {
+		buttonCrearProveedor->Enabled = true;
+		buttonCrearProveedor->BackColor = Drawing::Color::SandyBrown;
+	}
+	else {
+		buttonCrearProveedor->Enabled = false;
+		buttonCrearProveedor->BackColor = Drawing::Color::PeachPuff;
+	}
+	if (userConectado.getOrdenDeCompra()) {
+		buttonCompra->Enabled = true;
+		buttonCompra->BackColor = Drawing::Color::SandyBrown;
+		buttonVerCompras->Enabled = true;
+		buttonVerCompras->BackColor = Drawing::Color::SandyBrown;
+	}
+	else {
+		buttonCompra->Enabled = false;
+		buttonCompra->BackColor = Drawing::Color::PeachPuff;
+		buttonVerCompras->Enabled = false;
+		buttonVerCompras->BackColor = Drawing::Color::PeachPuff;
+	}
+	if (userConectado.getOrdenDeVenta()) {
+		buttonVenta->Enabled = true;
+		buttonVenta->BackColor = Drawing::Color::SandyBrown;
+		buttonVerVentas->Enabled = true;
+		buttonVerVentas->BackColor = Drawing::Color::SandyBrown;
+	}
+	else {
+		buttonVenta->Enabled = false;
+		buttonVenta->BackColor = Drawing::Color::PeachPuff;
+		buttonVerVentas->Enabled = false;
+		buttonVerVentas->BackColor = Drawing::Color::PeachPuff;
+	}
+	if (userConectado.getCrearUser()) {
 		buttonAgregarUsuario->Enabled = true;
-		buttonAgregarUsuario->BackColor = System::Drawing::Color::SandyBrown;
+		buttonAgregarUsuario->BackColor = Drawing::Color::SandyBrown;
 	}
 	else {
 		buttonAgregarUsuario->Enabled = false;
-		buttonAgregarUsuario->BackColor = System::Drawing::Color::PeachPuff;
+		buttonAgregarUsuario->BackColor = Drawing::Color::PeachPuff;
 	}
-
 	labelUsuario->Text = user;
-	//Archivos::verificarArchivos();
 }
 
 Void MenuPrincipal::MenuCierra(Object^ sender, FormClosedEventArgs^ e) {
@@ -70,7 +119,7 @@ Void MenuPrincipal::botonInventario(System::Object^ sender, System::EventArgs^ e
 	}
 }
 
-Void MenuPrincipal::button3_Click(System::Object^ sender, System::EventArgs^ e) {
+Void MenuPrincipal::buttonVenta_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (menuVentas == nullptr || menuVentas->IsDisposed) {
 		menuVentas = gcnew MenuVentas();
 		menuVentas->Show();

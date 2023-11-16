@@ -31,10 +31,12 @@ MenuVentas::MenuVentas()
         comboBoxCliente->Items->Add(nombreCliente);
     }
     for (int i = 0; i < archBuff.vectorItems.size(); i++) {
-        String^ nombreItem = gcnew System::String(archBuff.vectorItems[i].getNombre());
-        String^ idItem = archBuff.vectorItems[i].getID().ToString();
-        String^ nombreConID = String::Concat(idItem,":",nombreItem);
-        comboBoxItems->Items->Add(nombreConID);
+        if (archBuff.vectorItems[i].getVendible()) {
+            String^ nombreItem = gcnew System::String(archBuff.vectorItems[i].getNombre());
+            String^ idItem = archBuff.vectorItems[i].getID().ToString();
+            String^ nombreConID = String::Concat(idItem, ":", nombreItem);
+            comboBoxItems->Items->Add(nombreConID);
+        }
     }
     if (archBuff.vectorVentas.size() == 0) {
         labelNumeroVenta->Text = "0";
@@ -146,7 +148,7 @@ Void MenuVentas::buttonGuardar_Click(System::Object^ sender, System::EventArgs^ 
         int numeroVenta = Convert::ToInt32(labelNumeroVenta->Text);
         Usuarios userConectado = Archivos::getUsuarioConectado();
         Fecha fechaHoy;
-        Ventas venta(numeroVenta, userConectado, total, true, fechaHoy);
+        Ventas venta(numeroVenta, userConectado, total, "Activa", fechaHoy);
         for (int i = 0; i < dataGridView1->Rows->Count; i++)
         {
             Object^ idValor = dataGridView1->Rows[i]->Cells[6]->Value;

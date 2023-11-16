@@ -32,10 +32,12 @@ MenuCompras::MenuCompras()
 
     }
     for (int i = 0; i < archBuff.vectorItems.size(); i++) {
-        String^ nombreItem = gcnew System::String(archBuff.vectorItems[i].getNombre());
-        String^ idItem = archBuff.vectorItems[i].getID().ToString();
-        String^ nombreConID = String::Concat(idItem, ":", nombreItem);
-        comboBoxItems->Items->Add(nombreConID);
+        if (archBuff.vectorItems[i].getComprable()) {
+            String^ nombreItem = gcnew System::String(archBuff.vectorItems[i].getNombre());
+            String^ idItem = archBuff.vectorItems[i].getID().ToString();
+            String^ nombreConID = String::Concat(idItem, ":", nombreItem);
+            comboBoxItems->Items->Add(nombreConID);
+        }
     }
     if (archBuff.vectorCompras.size() == 0) {
         labelNumeroCompra->Text = "0";

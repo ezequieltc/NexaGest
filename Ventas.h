@@ -15,18 +15,18 @@ class Ventas{
         Items _productos[20];
         int _cantidad[20];
         float _total;
-        bool _estado;
+        char _estado[20];
         Fecha _fecha;
 
     public:
     Ventas();
-    Ventas(int numero, Usuarios usuario, float total, bool estado, Fecha fecha);
+    Ventas(int numero, Usuarios usuario, float total, const char* estado, Fecha fecha);
     void setNumero(int numero);
     void setUsuario(Usuarios usuario);
     void setCliente(Clientes cliente);
     void setProductos(Items productosNuevo, int cantidadProd, int indice);
     void setTotal(float total);
-    void setEstado(bool estado);
+    void setEstado(const char* estado);
     void setFecha(Fecha fecha);
     int getNumero();
     Usuarios getUsuario();
@@ -34,7 +34,7 @@ class Ventas{
     Items* getProducto();
     int* getCantidad();
     float getTotal();
-    bool getEstado();
+    const char* getEstado();
     Fecha getFecha();
     
 

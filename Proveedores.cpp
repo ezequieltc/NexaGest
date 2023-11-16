@@ -69,3 +69,6 @@ bool Proveedores::getActivo(){
 float Proveedores::getTotalComprado() {
     return _totalComprado;
 }
+int Proveedores::getID() {
+    return Persona::getId();
+}

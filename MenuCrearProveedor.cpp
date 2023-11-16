@@ -11,7 +11,10 @@
 using namespace std;
 using namespace NexaGest;
 
-
+MenuCrearProveedor::MenuCrearProveedor() {
+	InitializeComponent();
+	actualizarListado();
+}
 
 Void MenuCrearProveedor::buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (textBoxEmpresa->Text == "" && textBoxRubro->Text == "" && textBoxTelefono->Text == "" && textBoxDireccion->Text == "" && textBoxEmail->Text == "" && textBoxContacto->Text == "" && textBoxCuit->Text == "") {
@@ -41,7 +44,14 @@ Void MenuCrearProveedor::buttonAgregar_Click(System::Object^ sender, System::Eve
 		const char* charEmail = strEmail.c_str();
 		const char* charcontacto = strContacto.c_str();
 		const char* charCuit = strCuit.c_str();
-		Proveedores provee(charEmpresa, charRubro, charTelefono, charDireccion, charcontacto, charCuit, true, "", "", charEmail, 0, true);
+		int id;
+		if (archUser.vectorProveedores.size() == 0) {
+			id = 0;
+		}
+		else {
+			id = archUser.vectorProveedores.back().getId() + 1;
+		}
+		Proveedores provee(charEmpresa, charRubro, charTelefono, charDireccion, charcontacto, charCuit, true, "", "", charEmail, id, true);
 		archUser.vectorProveedores.push_back(provee);
 		archUser.guardarVectorProveedores();
 		MessageBox::Show("Proveedor ingresado correctamente.", "Exito", MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -52,6 +62,7 @@ Void MenuCrearProveedor::buttonAgregar_Click(System::Object^ sender, System::Eve
 		textBoxEmail->Text = "";
 		textBoxContacto->Text = "";
 		textBoxCuit->Text = "";
+		actualizarListado();
 
 	}
 
@@ -60,4 +71,46 @@ Void MenuCrearProveedor::buttonCancelar_Click(System::Object^ sender, System::Ev
 	Close();
 }
 
+void MenuCrearProveedor::actualizarListado() {
+	dataGridView1->Rows->Clear();
+	Archivos archBuff;
+	archBuff.cargarVectorProveedores();
+	for (int i = 0; i < archBuff.vectorProveedores.size(); i++) {
+		int id = archBuff.vectorProveedores[i].getID();
+		const char* charEmpresa = archBuff.vectorProveedores[i].getEmpresa();
+		const char* charCuit = archBuff.vectorProveedores[i].getCuit();
+		const char* charContacto = archBuff.vectorProveedores[i].getContacto();
+		const char* charTelefono = archBuff.vectorProveedores[i].getTelefono();
+		const char* charDireccion = archBuff.vectorProveedores[i].getDireccion();
+		String^ empresaSTR = gcnew String(charEmpresa);
+		String^ cuitSTR = gcnew String(charCuit);
+		String^ contactoSTR = gcnew String(charContacto);
+		String^ telefonoSTR = gcnew String(charTelefono);
+		String^ direccionSTR = gcnew String(charDireccion);
+		dataGridView1->Rows->Add(empresaSTR, cuitSTR, contactoSTR, telefonoSTR, direccionSTR, id);
+	}
+
+}
+
+Void MenuCrearProveedor::buttonEliminar_Click(System::Object^ sender, System::EventArgs^ e) {
+	Archivos archBuff;
+	archBuff.cargarVectorProveedores();
+	int idUsuario = 0;
+	if (dataGridView1->SelectedRows->Count > 0) {
+		int indiceFilaSeleccionada = dataGridView1->SelectedRows[0]->Index;
+		idUsuario = Convert::ToInt32(dataGridView1->Rows[indiceFilaSeleccionada]->Cells["ID"]->Value);
+		for (int i = 0; i < archBuff.vectorProveedores.size(); i++) {
+			if (idUsuario == archBuff.vectorProveedores[i].getID()) {
+				archBuff.vectorProveedores.erase(archBuff.vectorProveedores.begin() + i);
+				archBuff.guardarVectorProveedores();
+				MessageBox::Show("Proveedor eliminado correctamente.", "Exito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			}
+		}
+		dataGridView1->Rows->RemoveAt(indiceFilaSeleccionada);
+		actualizarListado();
+	}
+	else {
+		MessageBox::Show("Tiene que seleccionar una fila antes de poder eliminarla.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+}
 

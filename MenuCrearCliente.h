@@ -15,13 +15,10 @@ namespace NexaGest {
 	public ref class MenuCrearCliente : public System::Windows::Forms::Form
 	{
 	public:
-		MenuCrearCliente(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
-		}
+		MenuCrearCliente();
+		void actualizarListado();
+
+
 
 	protected:
 		/// <summary>
@@ -70,6 +67,20 @@ namespace NexaGest {
 	private: System::Windows::Forms::TextBox^ textBoxEmail;
 
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Button^ buttonEliminar;
+
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Empresa;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CUIT;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Contacto;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Telefono;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Direccion;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ID;
+
+
+
+
+
 
 	protected:
 
@@ -124,6 +135,15 @@ namespace NexaGest {
 			this->textBoxCuit = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxEmail = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->buttonEliminar = (gcnew System::Windows::Forms::Button());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->Empresa = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->CUIT = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Contacto = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Telefono = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Direccion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ID = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBoxContacto
@@ -268,11 +288,68 @@ namespace NexaGest {
 			this->label6->TabIndex = 44;
 			this->label6->Text = L"Email";
 			// 
+			// buttonEliminar
+			// 
+			this->buttonEliminar->Location = System::Drawing::Point(326, 23);
+			this->buttonEliminar->Name = L"buttonEliminar";
+			this->buttonEliminar->Size = System::Drawing::Size(107, 41);
+			this->buttonEliminar->TabIndex = 46;
+			this->buttonEliminar->Text = L"Eliminar";
+			this->buttonEliminar->UseVisualStyleBackColor = true;
+			this->buttonEliminar->Click += gcnew System::EventHandler(this, &MenuCrearCliente::buttonEliminar_Click);
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->AllowUserToDeleteRows = false;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+				this->Empresa,
+					this->CUIT, this->Contacto, this->Telefono, this->Direccion, this->ID
+			});
+			this->dataGridView1->Location = System::Drawing::Point(326, 82);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(650, 262);
+			this->dataGridView1->TabIndex = 47;
+			// 
+			// Empresa
+			// 
+			this->Empresa->HeaderText = L"Empresa";
+			this->Empresa->Name = L"Empresa";
+			// 
+			// CUIT
+			// 
+			this->CUIT->HeaderText = L"CUIT";
+			this->CUIT->Name = L"CUIT";
+			// 
+			// Contacto
+			// 
+			this->Contacto->HeaderText = L"Contacto";
+			this->Contacto->Name = L"Contacto";
+			// 
+			// Telefono
+			// 
+			this->Telefono->HeaderText = L"Telefono";
+			this->Telefono->Name = L"Telefono";
+			// 
+			// Direccion
+			// 
+			this->Direccion->HeaderText = L"Direccion";
+			this->Direccion->Name = L"Direccion";
+			// 
+			// ID
+			// 
+			this->ID->HeaderText = L"ID";
+			this->ID->Name = L"ID";
+			this->ID->Visible = false;
+			// 
 			// MenuCrearCliente
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(321, 356);
+			this->ClientSize = System::Drawing::Size(988, 356);
+			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->buttonEliminar);
 			this->Controls->Add(this->textBoxEmail);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->textBoxCuit);
@@ -293,6 +370,7 @@ namespace NexaGest {
 			this->Name = L"MenuCrearCliente";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MenuCrearCliente";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -300,5 +378,6 @@ namespace NexaGest {
 #pragma endregion
 		Void buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e);
 		Void buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e);
+		Void buttonEliminar_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

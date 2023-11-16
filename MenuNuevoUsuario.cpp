@@ -155,3 +155,30 @@ Void MenuNuevoUsuario::buttonEliminar_Click(System::Object^ sender, System::Even
 		MessageBox::Show("Tiene que seleccionar una fila antes de poder eliminarla.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 }
+
+Void MenuNuevoUsuario::comboBoxTipo_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (comboBoxTipo->Text == "Administrador") {
+		checkBoxOrdenVenta->Checked = true;
+		checkBoxOrdenCompra->Checked = true;
+		checkBoxUsuarios->Checked = true;
+		checkBoxItems->Checked = true;
+		checkBoxProveedores->Checked = true;
+		checkBoxClientes->Checked = true;
+	}
+	else if (comboBoxTipo->Text == "Vendedor") {
+		checkBoxOrdenVenta->Checked = true;
+		checkBoxOrdenCompra->Checked = false;
+		checkBoxUsuarios->Checked = false;
+		checkBoxItems->Checked = false;
+		checkBoxProveedores->Checked = false;
+		checkBoxClientes->Checked = true;
+	}
+	else {
+		checkBoxOrdenVenta->Checked = false;
+		checkBoxOrdenCompra->Checked = true;
+		checkBoxUsuarios->Checked = false;
+		checkBoxItems->Checked = false;
+		checkBoxProveedores->Checked = true;
+		checkBoxClientes->Checked = false;
+	}
+}

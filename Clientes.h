@@ -22,6 +22,7 @@ public:
 	const char* getContacto();
 	float getTotalVendido();
 	const char* getCuit();
+	int getID();
 	bool getConsumidorFinal();
 	bool getActivo();
 

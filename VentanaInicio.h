@@ -169,6 +169,7 @@ namespace NexaGest {
 			// 
 			// buttonCancelar
 			// 
+			this->buttonCancelar->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->buttonCancelar->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightGray;
 			this->buttonCancelar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->buttonCancelar->ForeColor = System::Drawing::Color::DimGray;
@@ -195,9 +196,11 @@ namespace NexaGest {
 			// 
 			// VentanaInicio
 			// 
+			this->AcceptButton = this->buttonIngresar;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
+			this->CancelButton = this->buttonCancelar;
 			this->ClientSize = System::Drawing::Size(764, 291);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->buttonCancelar);

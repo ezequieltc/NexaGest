@@ -48,6 +48,10 @@ bool Clientes::getConsumidorFinal(){
 bool  Clientes::getActivo(){
     return activo;
 }
+
+int Clientes::getID() {
+    return Persona::getId();
+}
 void Clientes::setEmpresa(const char* empresaSet){
     strcpy(empresa, empresaSet);
 }

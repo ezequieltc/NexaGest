@@ -52,6 +52,8 @@ Class NexaGest.MenuNuevoUsuario: AutoLayout, AnsiClass, Class, Public, BeforeFie
 Class NexaGest.MenuCrearCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarListado(): PrivateScope, Public, HideBySig
 Class NexaGest.VentanaVerVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -60,6 +62,8 @@ Class NexaGest.VentanaVerVentas: AutoLayout, AnsiClass, Class, Public, BeforeFie
 Class NexaGest.MenuCrearProveedor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarListado(): PrivateScope, Public, HideBySig
 Class NexaGest.MenuCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -69,6 +73,8 @@ Class NexaGest.MenuCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
 Class NexaGest.VentanaVerCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    cargarElementos(): PrivateScope, Public, HideBySig
 Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

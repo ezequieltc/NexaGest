@@ -50,6 +50,14 @@ namespace NexaGest {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Marca;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Cantidad;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Precio;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Vendible;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Comprable;
+
+
+
+
+
+
 
 
 
@@ -80,6 +88,8 @@ namespace NexaGest {
 			this->Marca = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Cantidad = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Precio = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Vendible = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Comprable = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -88,14 +98,14 @@ namespace NexaGest {
 			this->dataGridView1->AllowUserToAddRows = false;
 			this->dataGridView1->AllowUserToDeleteRows = false;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
 				this->ID, this->Nombre,
-					this->Descripcion, this->Marca, this->Cantidad, this->Precio
+					this->Descripcion, this->Marca, this->Cantidad, this->Precio, this->Vendible, this->Comprable
 			});
 			this->dataGridView1->Location = System::Drawing::Point(28, 115);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
-			this->dataGridView1->Size = System::Drawing::Size(731, 429);
+			this->dataGridView1->Size = System::Drawing::Size(930, 429);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// buttonEliminar
@@ -148,11 +158,23 @@ namespace NexaGest {
 			this->Precio->Name = L"Precio";
 			this->Precio->ReadOnly = true;
 			// 
+			// Vendible
+			// 
+			this->Vendible->HeaderText = L"Vendible";
+			this->Vendible->Name = L"Vendible";
+			this->Vendible->ReadOnly = true;
+			// 
+			// Comprable
+			// 
+			this->Comprable->HeaderText = L"Comprable";
+			this->Comprable->Name = L"Comprable";
+			this->Comprable->ReadOnly = true;
+			// 
 			// VentanaInventario
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(771, 565);
+			this->ClientSize = System::Drawing::Size(970, 565);
 			this->Controls->Add(this->buttonEliminar);
 			this->Controls->Add(this->dataGridView1);
 			this->Name = L"VentanaInventario";

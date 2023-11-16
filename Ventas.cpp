@@ -10,11 +10,11 @@ using namespace std;
 Ventas::Ventas(){
 
 }
-Ventas::Ventas(int numero, Usuarios usuario, float total, bool estado, Fecha fecha){
+Ventas::Ventas(int numero, Usuarios usuario, float total, const char* estado, Fecha fecha){
     _numero = numero;
     _usuario = usuario;
     _total = total;
-    _estado = estado;
+    strcpy(_estado, estado);
     _fecha = fecha;
     for (int i = 0; i < 20; i++) {
         _cantidad[i] = 0;
@@ -41,8 +41,8 @@ void Ventas::setProductos(Items productosNuevo, int cantidadProd, int indice){
 void Ventas::setTotal(float total){
     _total = total;
 }
-void Ventas::setEstado(bool estado){
-    _estado = estado;
+void Ventas::setEstado(const char* estado){
+    strcpy(_estado, estado);
 }
 void Ventas::setFecha(Fecha fecha){
     _fecha = fecha;
@@ -65,7 +65,7 @@ int* Ventas::getCantidad() {
 float Ventas::getTotal(){
     return _total;
 }
-bool Ventas::getEstado(){
+const char* Ventas::getEstado(){
     return _estado;
 }
 Fecha Ventas::getFecha(){

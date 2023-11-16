@@ -16,6 +16,8 @@ void VentanaInventario::cargarItems() {
 	int id;
 	int cantidad;
 	float precio;
+	String^ vendible;
+	String^ comprable;
 
 	for (int i = 0; i < arch.vectorItems.size(); i++) {
 		nombre = arch.vectorItems[i].getNombre();
@@ -24,10 +26,23 @@ void VentanaInventario::cargarItems() {
 		precio = arch.vectorItems[i].getPrecio();
 		cantidad = arch.vectorItems[i].getCantidad();
 		marca = arch.vectorItems[i].getMarca();
+		if (arch.vectorItems[i].getVendible()) {
+			vendible = "Si";
+		}
+		else {
+			vendible = "No";
+		}
+		if (arch.vectorItems[i].getComprable())
+		{
+			comprable = "Si";
+		}
+		else {
+			comprable = "No";
+		}
 		String^ nombreSTR = gcnew String(nombre);
 		String^ descripcionSTR = gcnew String(descripcion);
 		String^ marcaSTR = gcnew String(marca);
-		dataGridView1->Rows->Add(id, nombreSTR, descripcionSTR, marcaSTR,cantidad, precio);
+		dataGridView1->Rows->Add(id, nombreSTR, descripcionSTR, marcaSTR,cantidad, precio, vendible, comprable);
 	
 
 	}

@@ -33,6 +33,7 @@ public:
     const char* getDireccion();
     const char* getContacto();
     const char* getCuit();
+    int getID();
     bool getActivo();
     float getTotalComprado();
 

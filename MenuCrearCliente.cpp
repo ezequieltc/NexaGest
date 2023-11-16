@@ -10,7 +10,10 @@
 using namespace std;
 using namespace NexaGest;
 
-
+MenuCrearCliente::MenuCrearCliente() {
+	InitializeComponent();
+	actualizarListado();
+}
 
 Void MenuCrearCliente::buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (textBoxEmpresa->Text == "" && textBoxRubro->Text == "" && textBoxTelefono->Text == "" && textBoxDireccion->Text == "" && textBoxEmail->Text == "" && textBoxContacto->Text == "" && textBoxCuit->Text == "") {
@@ -41,7 +44,14 @@ Void MenuCrearCliente::buttonAgregar_Click(System::Object^ sender, System::Event
 		const char* charcontacto = strContacto.c_str();
 		const char* charCuit = strCuit.c_str();
 		bool consumidorFinal = checkBoxConsumidorFinal->Checked;
-		Clientes cliente(charEmpresa, charRubro, charTelefono, charDireccion, charcontacto, charCuit, consumidorFinal, true, charEmpresa, "", charEmail, 0, true);
+		int id;
+		if (archUser.vectorClientes.size() == 0) {
+			id = 0;
+		}
+		else {
+			id = archUser.vectorClientes.back().getId() + 1;
+		}
+		Clientes cliente(charEmpresa, charRubro, charTelefono, charDireccion, charcontacto, charCuit, consumidorFinal, true, charEmpresa, "", charEmail, id, true);
 		archUser.vectorClientes.push_back(cliente);
 		archUser.guardarVectorClientes();
 		MessageBox::Show("Cliente ingresado correctamente", "Exito", MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -53,10 +63,54 @@ Void MenuCrearCliente::buttonAgregar_Click(System::Object^ sender, System::Event
 		textBoxContacto->Text = "";
 		textBoxCuit->Text = "";
 		checkBoxConsumidorFinal->Checked = false;
+		actualizarListado();
 	}
+}
+
+void MenuCrearCliente::actualizarListado() {
+	dataGridView1->Rows->Clear();
+	Archivos archBuff;
+	archBuff.cargarVectorClientes();
+	for (int i = 0; i < archBuff.vectorClientes.size(); i++) {
+		int id = archBuff.vectorClientes[i].getID();
+		const char* charEmpresa = archBuff.vectorClientes[i].getEmpresa();
+		const char* charCuit = archBuff.vectorClientes[i].getCuit();
+		const char* charContacto = archBuff.vectorClientes[i].getContacto();
+		const char* charTelefono = archBuff.vectorClientes[i].getTelefono();
+		const char* charDireccion = archBuff.vectorClientes[i].getDireccion();
+		String^ empresaSTR = gcnew String(charEmpresa);
+		String^ cuitSTR = gcnew String(charCuit);
+		String^ contactoSTR = gcnew String(charContacto);
+		String^ telefonoSTR = gcnew String(charTelefono);
+		String^ direccionSTR = gcnew String(charDireccion);
+		dataGridView1->Rows->Add(empresaSTR, cuitSTR, contactoSTR, telefonoSTR, direccionSTR, id);
+	}
+
 }
 Void MenuCrearCliente::buttonCancelar_Click(System::Object^ sender, System::EventArgs^ e) {
 	Close();
+}
+
+Void MenuCrearCliente::buttonEliminar_Click(System::Object^ sender, System::EventArgs^ e) {
+	Archivos archBuff;
+	archBuff.cargarVectorClientes();
+	int idUsuario = 0;
+	if (dataGridView1->SelectedRows->Count > 0) {
+		int indiceFilaSeleccionada = dataGridView1->SelectedRows[0]->Index;
+		idUsuario = Convert::ToInt32(dataGridView1->Rows[indiceFilaSeleccionada]->Cells["ID"]->Value);
+		for (int i = 0; i < archBuff.vectorClientes.size(); i++) {
+			if (idUsuario == archBuff.vectorClientes[i].getID()) {
+				archBuff.vectorClientes.erase(archBuff.vectorClientes.begin() + i);
+				archBuff.guardarVectorClientes();
+				MessageBox::Show("Cliente eliminado correcto.", "Exito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			}
+		}
+		dataGridView1->Rows->RemoveAt(indiceFilaSeleccionada);
+		actualizarListado();
+	}
+	else {
+		MessageBox::Show("Tiene que seleccionar una fila antes de poder eliminarla.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
 }
 
 
