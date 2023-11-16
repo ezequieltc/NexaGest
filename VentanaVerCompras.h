@@ -394,7 +394,7 @@ namespace NexaGest {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(625, 575);
+			this->label6->Location = System::Drawing::Point(619, 575);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(94, 13);
 			this->label6->TabIndex = 45;

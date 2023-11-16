@@ -53,8 +53,8 @@ namespace NexaGest {
 	private: System::Windows::Forms::TextBox^ textBoxNombre;
 	private: System::Windows::Forms::TextBox^ textBoxDescripcion;
 	private: System::Windows::Forms::TextBox^ textBoxMarca;
-	private: System::Windows::Forms::TextBox^ textBoxPrecio;
-	private: System::Windows::Forms::TextBox^ textBoxCosto;
+
+
 
 
 
@@ -63,7 +63,11 @@ namespace NexaGest {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBoxCantidad;
+
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownCant;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownPre;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownCos;
+
 
 
 
@@ -97,12 +101,15 @@ namespace NexaGest {
 			this->textBoxNombre = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxDescripcion = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxMarca = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxPrecio = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxCosto = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBoxCantidad = (gcnew System::Windows::Forms::TextBox());
+			this->numericUpDownCant = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDownPre = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDownCos = (gcnew System::Windows::Forms::NumericUpDown());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownCant))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownPre))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownCos))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -201,20 +208,6 @@ namespace NexaGest {
 			this->textBoxMarca->Size = System::Drawing::Size(301, 20);
 			this->textBoxMarca->TabIndex = 10;
 			// 
-			// textBoxPrecio
-			// 
-			this->textBoxPrecio->Location = System::Drawing::Point(79, 157);
-			this->textBoxPrecio->Name = L"textBoxPrecio";
-			this->textBoxPrecio->Size = System::Drawing::Size(96, 20);
-			this->textBoxPrecio->TabIndex = 12;
-			// 
-			// textBoxCosto
-			// 
-			this->textBoxCosto->Location = System::Drawing::Point(79, 185);
-			this->textBoxCosto->Name = L"textBoxCosto";
-			this->textBoxCosto->Size = System::Drawing::Size(96, 20);
-			this->textBoxCosto->TabIndex = 13;
-			// 
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(31, 291);
@@ -244,24 +237,47 @@ namespace NexaGest {
 			this->label6->TabIndex = 15;
 			this->label6->Text = L"Cantidad";
 			// 
-			// textBoxCantidad
+			// numericUpDownCant
 			// 
-			this->textBoxCantidad->Location = System::Drawing::Point(79, 126);
-			this->textBoxCantidad->Name = L"textBoxCantidad";
-			this->textBoxCantidad->Size = System::Drawing::Size(100, 20);
-			this->textBoxCantidad->TabIndex = 11;
+			this->numericUpDownCant->DecimalPlaces = 2;
+			this->numericUpDownCant->Location = System::Drawing::Point(80, 126);
+			this->numericUpDownCant->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 24045642, 0, 0, 0 });
+			this->numericUpDownCant->Name = L"numericUpDownCant";
+			this->numericUpDownCant->Size = System::Drawing::Size(120, 20);
+			this->numericUpDownCant->TabIndex = 19;
+			this->numericUpDownCant->ThousandsSeparator = true;
+			// 
+			// numericUpDownPre
+			// 
+			this->numericUpDownPre->DecimalPlaces = 2;
+			this->numericUpDownPre->Location = System::Drawing::Point(80, 155);
+			this->numericUpDownPre->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 24045642, 0, 0, 0 });
+			this->numericUpDownPre->Name = L"numericUpDownPre";
+			this->numericUpDownPre->Size = System::Drawing::Size(120, 20);
+			this->numericUpDownPre->TabIndex = 20;
+			this->numericUpDownPre->ThousandsSeparator = true;
+			// 
+			// numericUpDownCos
+			// 
+			this->numericUpDownCos->DecimalPlaces = 2;
+			this->numericUpDownCos->Location = System::Drawing::Point(80, 185);
+			this->numericUpDownCos->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 24045642, 0, 0, 0 });
+			this->numericUpDownCos->Name = L"numericUpDownCos";
+			this->numericUpDownCos->Size = System::Drawing::Size(120, 20);
+			this->numericUpDownCos->TabIndex = 21;
+			this->numericUpDownCos->ThousandsSeparator = true;
 			// 
 			// VentanaItems
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(419, 363);
-			this->Controls->Add(this->textBoxCantidad);
+			this->Controls->Add(this->numericUpDownCos);
+			this->Controls->Add(this->numericUpDownPre);
+			this->Controls->Add(this->numericUpDownCant);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBoxCosto);
-			this->Controls->Add(this->textBoxPrecio);
 			this->Controls->Add(this->textBoxMarca);
 			this->Controls->Add(this->textBoxDescripcion);
 			this->Controls->Add(this->textBoxNombre);
@@ -276,6 +292,9 @@ namespace NexaGest {
 			this->Name = L"VentanaItems";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"VentanaItems";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownCant))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownPre))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownCos))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

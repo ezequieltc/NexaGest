@@ -73,7 +73,7 @@ namespace NexaGest {
 
 
 	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::TextBox^ textBoxCantidad;
+
 
 
 
@@ -94,6 +94,8 @@ namespace NexaGest {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Descuento;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ TotalColumna;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IDColumna;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownCant;
+
 
 
 
@@ -137,7 +139,6 @@ namespace NexaGest {
 			this->comboBoxItems = (gcnew System::Windows::Forms::ComboBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->textBoxCantidad = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->Nombre = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Descripcion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -146,7 +147,9 @@ namespace NexaGest {
 			this->Descuento = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->TotalColumna = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->IDColumna = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->numericUpDownCant = (gcnew System::Windows::Forms::NumericUpDown());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownCant))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -371,13 +374,6 @@ namespace NexaGest {
 			this->label9->TabIndex = 22;
 			this->label9->Text = L"Cantidad:";
 			// 
-			// textBoxCantidad
-			// 
-			this->textBoxCantidad->Location = System::Drawing::Point(520, 100);
-			this->textBoxCantidad->Name = L"textBoxCantidad";
-			this->textBoxCantidad->Size = System::Drawing::Size(100, 21);
-			this->textBoxCantidad->TabIndex = 23;
-			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->AllowUserToAddRows = false;
@@ -439,13 +435,21 @@ namespace NexaGest {
 			this->IDColumna->ReadOnly = true;
 			this->IDColumna->Visible = false;
 			// 
+			// numericUpDownCant
+			// 
+			this->numericUpDownCant->Location = System::Drawing::Point(520, 100);
+			this->numericUpDownCant->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 650000, 0, 0, 0 });
+			this->numericUpDownCant->Name = L"numericUpDownCant";
+			this->numericUpDownCant->Size = System::Drawing::Size(51, 21);
+			this->numericUpDownCant->TabIndex = 25;
+			// 
 			// MenuVentas
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(741, 562);
+			this->Controls->Add(this->numericUpDownCant);
 			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->textBoxCantidad);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->comboBoxItems);
 			this->Controls->Add(this->label8);
@@ -473,6 +477,7 @@ namespace NexaGest {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MenuVentas";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownCant))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

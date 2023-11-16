@@ -47,9 +47,11 @@ void VentanaItems::ingresarItem() {
 		nombre = nombreSTR.c_str();
 		descripcion = descripcionSTR.c_str();
 		marca = marcaSTR.c_str();
-		precio = stof(msclr::interop::marshal_as<string>(textBoxPrecio->Text));
-		costo = stof(msclr::interop::marshal_as<string>(textBoxCosto->Text));
-		cantidad = stoi(msclr::interop::marshal_as<string>(textBoxCantidad->Text));
+		//precio = stof(msclr::interop::marshal_as<string>(textBoxPrecio->Text));
+		precio = Decimal::ToInt32(numericUpDownPre->Value);
+		//costo = stof(msclr::interop::marshal_as<string>(textBoxCosto->Text));
+		costo = Decimal::ToInt32(numericUpDownCos->Value);
+		cantidad = Decimal::ToInt32(numericUpDownCant->Value);
 		vendible = checkBoxVendible->Checked;
 		comprable = checkBoxComprable->Checked;
 		estado = checkBoxEstado->Checked;
@@ -66,9 +68,9 @@ void VentanaItems::ingresarItem() {
 		textBoxNombre->Text = "";
 		textBoxDescripcion->Text = "";
 		textBoxMarca->Text = "";
-		textBoxPrecio->Text = "";
-		textBoxCosto->Text = "";
-		textBoxCantidad->Text = "";
+		numericUpDownCos->Value = 0;
+		numericUpDownCant->Value = 0;
+		numericUpDownPre->Value = 0;
 		checkBoxVendible->Checked = false;
 		checkBoxComprable->Checked = false;
 		checkBoxEstado->Checked = false;

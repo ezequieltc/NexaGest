@@ -1,2 +1,35 @@
-﻿  Archivos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+﻿  Archivos.cpp
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(24,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(38,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(49,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(61,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(80,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(94,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(104,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(113,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(123,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(133,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(143,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(152,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(160,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(163,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(168,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(170,3): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(172,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(174,3): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(176,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(178,3): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(180,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(182,3): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(184,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\Archivos.cpp(186,3): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  MenuPrincipal.cpp
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  VentanaInicio.cpp
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaInicio.cpp(26,14): warning C4101: 'userr': variable local sin referencia
+  main.cpp
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaItems.h(2,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  Generando código...
+  Archivos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   NexaGest.vcxproj -> E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.exe

@@ -68,6 +68,13 @@ VentanaVerVentas::VentanaVerVentas() {
 			comboBoxVendedor->Items->Add(vendedorSTR);
 		}
 	}
+	labelNeto->Text = "0";
+	labelIVA->Text = "0";
+	labelTotalVentas->Text = "0";
+	labelNumeroVenta->Text = "";
+	labelClienteVenta->Text = "";
+	labelVendedorVenta->Text = "";
+	labelEstado->Text = "";
 }
 
 void VentanaVerVentas::cargarElementos() {

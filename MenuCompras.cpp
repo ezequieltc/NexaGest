@@ -72,7 +72,7 @@ void MenuCompras::actualizarVista() {
     total = 0;
     comboBoxProveedor->Text = "";
     comboBoxItems->Text = "";
-    textBoxCantidad->Text = "";
+    numericUpDownCant->Value = 0;
     actualizarValores();
 }
 
@@ -83,12 +83,7 @@ Void MenuCompras::buttonCancelar_Click(System::Object^ sender, System::EventArgs
 
 Void MenuCompras::buttonAgregar_Click(System::Object^ sender, System::EventArgs^ e) {
     int cantidad;
-    if (textBoxCantidad->Text == "") {
-        cantidad = 0;
-    }
-    else {
-        cantidad = Convert::ToInt32(textBoxCantidad->Text);
-    }
+    cantidad = Decimal::ToInt32(numericUpDownCant->Value);
     if (cantidad <= 0) {
         MessageBox::Show("Se debe ingresar una cantidad mayor a '0'.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
     }

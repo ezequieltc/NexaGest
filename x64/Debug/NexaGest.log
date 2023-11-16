@@ -1,9 +1,9 @@
-﻿  VentanaVerCompras.cpp
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerCompras.cpp(107,44): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerCompras.cpp(189,34): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerCompras.cpp(300,17): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerCompras.cpp(303,53): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerCompras.cpp(307,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerCompras.cpp(278,22): warning C4101: 'indice': variable local sin referencia
+﻿  VentanaVerVentas.cpp
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerVentas.cpp(312,22): warning C4101: 'indice': variable local sin referencia
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerVentas.cpp(365,17): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerVentas.cpp(368,52): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerVentas.cpp(372,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerVentas.cpp(341,22): warning C4101: 'indice': variable local sin referencia
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\VentanaVerVentas.cpp(393,22): warning C4101: 'indice': variable local sin referencia
   Archivos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   NexaGest.vcxproj -> E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Debug\NexaGest.exe

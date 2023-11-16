@@ -1,6 +1,14 @@
+  NexaGest.MenuCompras.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.MenuCrearCliente.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.MenuCrearProveedor.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.MenuNuevoUsuario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.MenuPrincipal.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.MenuVentas.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaInicio.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.VentanaInventario.resources - Embedded, ContainedInManifestFile, 
   NexaGest.VentanaItems.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.VentanaVerCompras.resources - Embedded, ContainedInManifestFile, 
+  NexaGest.VentanaVerVentas.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly NexaGest, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
 	hash=SHA1, flags=PublicKey
@@ -20,10 +28,59 @@ Class NexaGest.VentanaItems: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
-    decirHola(): PrivateScope, Public, HideBySig
+    ingresarItem(): PrivateScope, Public, HideBySig
+    botonIngresar(Object, EventArgs): PrivateScope, Public, HideBySig
+    botonCancelar(Object, EventArgs): PrivateScope, Public, HideBySig
+Class NexaGest.VentanaInventario: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    cargarItems(): PrivateScope, Public, HideBySig
+    actualizarVista(): PrivateScope, Public, HideBySig
+Class NexaGest.MenuVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarValores(): PrivateScope, Public, HideBySig
+    actualizarVista(): PrivateScope, Public, HideBySig
+Class NexaGest.MenuNuevoUsuario: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarListado(): PrivateScope, Public, HideBySig
+    limpiarValores(): PrivateScope, Public, HideBySig
+Class NexaGest.MenuCrearCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarListado(): PrivateScope, Public, HideBySig
+Class NexaGest.VentanaVerVentas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    cargarElementos(): PrivateScope, Public, HideBySig
+Class NexaGest.MenuCrearProveedor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarListado(): PrivateScope, Public, HideBySig
+Class NexaGest.MenuCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    actualizarValores(): PrivateScope, Public, HideBySig
+    actualizarVista(): PrivateScope, Public, HideBySig
+Class NexaGest.VentanaVerCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    cargarElementos(): PrivateScope, Public, HideBySig
 Class NexaGest.MenuPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class NexaGest.VentanaInicio: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    buttonCancelar_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    buttonIngresar_Click(Object, EventArgs): PrivateScope, Public, HideBySig

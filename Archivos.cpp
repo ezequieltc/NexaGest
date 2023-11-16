@@ -127,6 +127,7 @@ void Archivos::cargarVectorProveedores() {
 	}
 	fclose(p);
 }
+
 void Archivos::guardarVectorProveedores() {
 	FILE* p;
 	p = fopen("./files/Proveedores.gest", "wb");

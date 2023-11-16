@@ -9,3 +9,11 @@ E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.VentanaInicio.r
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.VentanaItems.resources
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.vcxproj.GenerateResource.cache
 E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.exe
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.MenuCompras.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.MenuCrearCliente.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.MenuCrearProveedor.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.MenuNuevoUsuario.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.MenuVentas.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.VentanaInventario.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.VentanaVerCompras.resources
+E:\Programacion\UTN\TP_Laboratorio\NexaGest\x64\Release\NexaGest.VentanaVerVentas.resources

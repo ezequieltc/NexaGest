@@ -70,7 +70,12 @@ VentanaVerCompras::VentanaVerCompras() {
 			comboBoxComprador->Items->Add(compradorSTR);
 		}
 	}
-
+	labelNeto->Text = "0";
+	labelIVA->Text = "0";
+	labelTotalVentas->Text = "0";
+	labelNumeroCompra->Text = "";
+	labelProveedor->Text = "";
+	labelComprador->Text = "";
 
 }
 
