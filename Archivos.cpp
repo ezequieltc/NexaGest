@@ -22,6 +22,9 @@ Archivos::Archivos() {
 void Archivos::cargarVectorItems() {
 	FILE* p;
 	p = fopen("./files/Items.gest", "rb");
+	if (p == NULL) {
+		return;
+	}
 	Items item;
 	while (fread(&item, sizeof(Items), 1, p) == 1) {
 		vectorItems.push_back(item);
@@ -36,6 +39,9 @@ void Archivos::setVectorItems(vector<Items> vector) {
 void Archivos::guardarVectorItems() {
 	FILE* p;
 	p = fopen("./files/Items.gest", "wb");
+	if (p == NULL) {
+		return;
+	}
 	Items item;
 	for (int i = 0; i < vectorItems.size(); i++) {
 		fwrite(&vectorItems[i], sizeof(Items), 1, p);
@@ -47,6 +53,9 @@ void Archivos::guardarVectorItems() {
 void Archivos::cargarVectorUsuarios() {
 	FILE* p;
 	p = fopen("./files/Usuarios.gest", "rb");
+	if (p == NULL) {
+		return;
+	}
 	Usuarios user;
 	while (fread(&user, sizeof(Usuarios), 1, p) == 1) {
 		vectorUsuarios.push_back(user);
@@ -59,6 +68,9 @@ void Archivos::setVectorUsuarios(std::vector<Usuarios> vector) {
 void Archivos::guardarVectorUsuarios() {
 	FILE* p;
 	p = fopen("./files/Usuarios.gest", "wb");
+	if (p == NULL) {
+		return;
+	}
 	Usuarios user;
 	for (int i = 0; i < vectorUsuarios.size(); i++) {
 		fwrite(&vectorUsuarios[i], sizeof(Usuarios), 1, p);
@@ -78,6 +90,9 @@ Usuarios Archivos::getUsuarioConectado() {
 void Archivos::cargarVectorVentas() {
 	FILE* p;
 	p = fopen("./files/Ventas.gest", "rb");
+	if (p == NULL) {
+		return;
+	}
 	Ventas venta;
 	while (fread(&venta, sizeof(Ventas), 1, p) == 1) {
 		vectorVentas.push_back(venta);
@@ -92,6 +107,9 @@ void Archivos::setVectorVentas(std::vector<Ventas> vector) {
 void Archivos::guardarVectorVentas() {
 	FILE* p;
 	p = fopen("./files/Ventas.gest", "wb");
+	if (p == NULL) {
+		return;
+	}
 	Ventas venta;
 	for (int i = 0; i < vectorVentas.size(); i++) {
 		fwrite(&vectorVentas[i], sizeof(Ventas), 1, p);
@@ -102,6 +120,9 @@ void Archivos::guardarVectorVentas() {
 void Archivos::cargarVectorClientes() {
 	FILE* p;
 	p = fopen("./files/Clientes.gest", "rb");
+	if (p == NULL) {
+		return;
+	}
 	Clientes cliente;
 	while (fread(&cliente, sizeof(Clientes), 1, p) == 1) {
 		vectorClientes.push_back(cliente);
@@ -111,6 +132,9 @@ void Archivos::cargarVectorClientes() {
 void Archivos::guardarVectorClientes() {
 	FILE* p;
 	p = fopen("./files/Clientes.gest", "wb");
+	if (p == NULL) {
+		return;
+	}
 	Clientes cliente;
 	for (int i = 0; i < vectorClientes.size(); i++) {
 		fwrite(&vectorClientes[i], sizeof(Clientes), 1, p);
@@ -121,6 +145,9 @@ void Archivos::guardarVectorClientes() {
 void Archivos::cargarVectorProveedores() {
 	FILE* p;
 	p = fopen("./files/Proveedores.gest", "rb");
+	if (p == NULL) {
+		return;
+	}
 	Proveedores proveedor;
 	while (fread(&proveedor, sizeof(Proveedores), 1, p) == 1) {
 		vectorProveedores.push_back(proveedor);
@@ -131,6 +158,9 @@ void Archivos::cargarVectorProveedores() {
 void Archivos::guardarVectorProveedores() {
 	FILE* p;
 	p = fopen("./files/Proveedores.gest", "wb");
+	if (p == NULL) {
+		return;
+	}
 	Proveedores proveedor;
 	for (int i = 0; i < vectorProveedores.size(); i++) {
 		fwrite(&vectorProveedores[i], sizeof(Proveedores), 1, p);
@@ -141,6 +171,9 @@ void Archivos::guardarVectorProveedores() {
 void Archivos::cargarVectorCompras() {
 	FILE* p;
 	p = fopen("./files/Compras.gest", "rb");
+	if (p == NULL) {
+		return;
+	}
 	Compras compra;
 	while (fread(&compra, sizeof(Compras), 1, p) == 1) {
 		vectorCompras.push_back(compra);
@@ -150,6 +183,9 @@ void Archivos::cargarVectorCompras() {
 void Archivos::guardarVectorCompras() {
 	FILE* p;
 	p = fopen("./files/Compras.gest", "wb");
+	if (p == NULL) {
+		return;
+	}
 	Compras compra;
 	for (int i = 0; i < vectorCompras.size(); i++) {
 		fwrite(&vectorCompras[i], sizeof(Compras), 1, p);
